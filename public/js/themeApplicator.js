@@ -16,9 +16,10 @@ class ThemeApplicator {
             </nav>
             <img class="hero" src="/img/banner.jpg">`
         ));
-        $("footer").append($("<h6>loveincoflewiscounty.org</h6>"));
-        $("footer").append($("<p>PO Box 152</p>"));
-        $("footer").append($("<p>Chehalis, WA 98532</p>"));
-        $("footer").append($("<p>360-748-8611</p>"));
+        this.$footer = $(`<div class="footer"></div>`).appendTo("body");
+        this.$footer.append($("<h6>loveincoflewiscounty.org</h6>"));
+        this.$footer.append($("<p>PO Box 152</p>"));
+        this.$footer.append($("<p>Chehalis, WA 98532</p>"));
+        this.$footer.append($("<p>360-748-8611</p>"));
     }
 }

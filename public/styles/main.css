@@ -97,7 +97,7 @@ main h3 {
     margin: 5px 0;
 }
 
-footer {
+div.footer {
     width: 90%;
     max-width: var(--max-main-width);
     margin: 0;
@@ -111,20 +111,22 @@ footer {
     flex-wrap: wrap;
 }
 
-footer .view-toggle {
-    display: none;
-}
-
-footer p {
+div.footer p {
+    width: 100%;
     color: white;
     padding: 5px 20px;
 }
 
-footer h6 {
+div.footer h6 {
+    width: 100%;
     color: white;
     padding: 5px 20px;
     font-weight: bold;
     font-size: 20px;
+}
+
+footer {
+    display: none;
 }
 
 hr {
