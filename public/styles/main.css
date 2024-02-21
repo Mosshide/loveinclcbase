@@ -88,6 +88,12 @@ footer {
     -moz-box-shadow: var(--shadow);
     box-shadow: var(--shadow);
     padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .view-toggle {
+    display: none;
 }
 
 footer p {
@@ -106,63 +112,4 @@ hr {
     border: 1px solid var(--second-color);
     margin: 10px 0;
     width: 100%;
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 250px;
-}
-
-.buttons a {
-    width: 170px;
-    height: 70%;
-    border: 8px solid var(--main-color);
-    border-radius: 50%;
-    position: relative;
-    margin: 15px;
-}
-
-.buttons a:hover {
-    border: 9px solid var(--main-color-hover);
-    transition: all 0.1s;
-}
-
-.buttons a p {
-    position: absolute;
-    width: 100%;
-    bottom: -45px;
-    left: 0;
-    text-align: center;
-    font-size: 25px;
-}
-
-.buttons a#donate {
-    background: url("/img/heart.png");
-    background-size: cover;
-}
-
-.buttons a#involve {
-    background: url("/img/volunteer.gif");
-    background-size: cover;
-}
-
-.buttons a#about {
-    background: url("/img/logo icon.jpg");
-    background-size: cover;
-}
-
-.buttons a#contact {
-    background: url("/img/cloud.jpg");
-    background-size: cover;
-}
-
-.info {
-    width: 70%;
-}
-
-.side {
-    width: 30%;
 }
