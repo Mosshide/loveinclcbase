@@ -78,6 +78,25 @@ main {
     padding: 30px;
 }
 
+main h2 {
+    width: 100%;
+}
+
+main p {
+    width: 100%;
+    font-size: 20px;
+}
+
+main h2 {
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+main h3 {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
 footer {
     width: 90%;
     max-width: var(--max-main-width);
@@ -112,4 +131,89 @@ hr {
     border: 1px solid var(--second-color);
     margin: 10px 0;
     width: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+}
+
+.buttons a {
+    width: 170px;
+    height: 70%;
+    border: 8px solid var(--main-color);
+    border-radius: 50%;
+    position: relative;
+    margin: 15px;
+}
+
+.buttons a:hover {
+    border: 9px solid var(--main-color-hover);
+    transition: all 0.1s;
+}
+
+.buttons a p {
+    position: absolute;
+    width: 100%;
+    bottom: -45px;
+    left: 0;
+    text-align: center;
+    font-size: 25px;
+}
+
+.buttons a#donate {
+    background: url("/img/heart.png");
+    background-size: cover;
+}
+
+.buttons a#involve {
+    background: url("/img/volunteer.gif");
+    background-size: cover;
+}
+
+.buttons a#about {
+    background: url("/img/logo icon.jpg");
+    background-size: cover;
+}
+
+.buttons a#contact {
+    background: url("/img/cloud.jpg");
+    background-size: cover;
+}
+
+.info {
+    width: 70%;
+}
+
+.side {
+    width: 30%;
+}
+
+.side .quote {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 450px;
+}
+
+.side .quote .text {
+    width: 70%;
+    height: auto;
+    margin: 10px;
+    margin-bottom: 2px;
+    font-size: 25px;
+}
+
+.side .quote .reference {
+    font-size: 23px;
+    text-align: right;
+}
+
+.side .thanks {
+    margin: 20px;
+    font-size: 25px;
 }
