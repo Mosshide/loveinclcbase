@@ -1,0 +1,33 @@
+{
+  "name": "loveinclcbase",
+  "version": "1.0.0",
+  "description": "The Love INC of Lewis County website.",
+  "main": "loveinclcbase",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mosshide/loveinclcbase.git"
+  },
+  "keywords": [
+    "love",
+    "inc",
+    "of",
+    "lewis",
+    "county",
+    "web",
+    "site",
+    "website"
+  ],
+  "author": "Love INC of Lewis County Webmaster",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mosshide/loveinclcbase/issues"
+  },
+  "homepage": "https://github.com/Mosshide/loveinclcbase#readme",
+  "dependencies": {
+    "notherbase-fs": "^3.2.16"
+  },
+  "type": "module"
+}

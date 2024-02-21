@@ -1,0 +1,37 @@
+<!-- renders the ejs file that corresponds to the query in the url -->
+<% if (query.contact != null || query.contact != undefined) { %>
+    <%- include('contact/contact.ejs'); %>
+<% } else if (query.resources != null || query.resources != undefined) { %>
+    <%- include('resources/resources.ejs'); %>
+<% } else if (query.about != null || query.about != undefined) { %>
+    <%- include('about/about.ejs'); %>
+<% } else if (query.getInvolved != null || query.getInvolved != undefined) { %>
+    <%- include('getInvolved/getInvolved.ejs'); %>
+<% } else if (query.question != null || query.question != undefined) { %>
+    <%- include('question/question.ejs'); %>
+<% } else { %>
+    <%- include('home.ejs'); %>
+<% } %>
+
+<script>
+    $("body").prepend($(
+        `<header>
+            <a href="/loveinclc">
+                <img src="/img/logo.jpg">
+            </a>
+        </header>
+        <nav>
+            <a href="/loveinclc">Home</a>
+            <a href="/loveinclc?getInvolved">Get Involved</a>
+            <a href="/loveinclc?resources">Resources</a>
+            <a href="/loveinclc?question">Question?</a>
+            <a href="/loveinclc?contact">Contact Us</a>
+            <a href="/loveinclc?about">About Us</a>
+        </nav>
+        <img class="hero" src="/img/banner.jpg">`
+    ));
+    $("footer").append($("<h6>loveincoflewiscounty.org</h6>"));
+    $("footer").append($("<p>PO Box 152</p>"));
+    $("footer").append($("<p>Chehalis, WA 98532</p>"));
+    $("footer").append($("<p>360-748-8611</p>"));
+</script>
