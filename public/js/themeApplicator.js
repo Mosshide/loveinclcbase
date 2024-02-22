@@ -20,7 +20,7 @@ class ThemeApplicator {
         else this.$nav.append($(`<a href="/the-front/about">About Us</a>`));
         this.$body.prepend(this.$nav);
         this.$body.prepend($(`<header>
-                <a href="/loveinclc">
+                <a href="/">
                     <img src="/img/logo.jpg">
                 </a>
             </header>`));
