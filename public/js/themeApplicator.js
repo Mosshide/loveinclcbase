@@ -14,8 +14,6 @@ class ThemeApplicator {
         else this.$nav.append($(`<a href="/the-front/getInvolved">Get Involved</a>`));
         if (this.path == "resources") this.$nav.append($(`<a class="selected" href="/resources">Resources</a>`));
         else this.$nav.append($(`<a href="/the-front/resources">Resources</a>`));
-        if (this.path == "question") this.$nav.append($(`<a class="selected" href="/question">Question?</a>`));
-        else this.$nav.append($(`<a href="/the-front/question">Question?</a>`));
         if (this.path == "contact") this.$nav.append($(`<a class="selected" href="/contact">Contact Us</a>`));
         else this.$nav.append($(`<a href="/the-front/contact">Contact Us</a>`));
         if (this.path == "about") this.$nav.append($(`<a class="selected" href="/about">About Us</a>`));
@@ -29,6 +27,7 @@ class ThemeApplicator {
 
         this.$footer = $(`<div class="footer"></div>`).appendTo("body");
         this.$footer.append($("<h6>loveincoflewiscounty.org</h6>"));
+        this.$footer.append($("<p>Love INC of Lewis County</p>"));
         this.$footer.append($("<p>PO Box 152</p>"));
         this.$footer.append($("<p>Chehalis, WA 98532</p>"));
         this.$footer.append($("<p>360-748-8611</p>"));
