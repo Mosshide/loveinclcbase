@@ -219,3 +219,8 @@ hr {
     margin: 20px;
     font-size: 25px;
 }
+
+.selected {
+    background-color: var(--main-color);
+    color: white;
+}
