@@ -75,7 +75,7 @@ main {
     -moz-box-shadow: var(--shadow);
     box-shadow: var(--shadow);
     background: white;
-    padding: 30px;
+    padding: 20px;
 }
 
 main h2 {
@@ -94,18 +94,19 @@ h5 {
     margin: 5px 0;
 }
 
-main p {
+p {
     width: 100%;
     font-size: 20px;
+    margin: 5px 0;
 }
 
-main h2 {
+h2 {
     font-size: 30px;
     margin: 5px 0;
     width: 100%;
 }
 
-main h3 {
+h3 {
     font-size: 23px;
     margin: 5px 0;
     width: 100%;
@@ -174,7 +175,7 @@ hr {
 .buttons a {
     width: 170px;
     height: 170px;
-    border: 8px solid var(--main-color);
+    border: 5px solid var(--main-color);
     border-radius: 50%;
     position: relative;
     margin: 15px;
@@ -182,7 +183,7 @@ hr {
 }
 
 .buttons a:hover {
-    border: 9px solid var(--main-color-hover);
+    border: 7px solid var(--main-color-hover);
     transition: all 0.1s;
 }
 
@@ -219,6 +220,7 @@ hr {
     width: 70%;
     display: flex;
     flex-wrap: wrap;
+    padding: 10px;
 }
 
 .side {
