@@ -142,7 +142,9 @@ div.footer {
 div.footer p {
     width: 100%;
     color: white;
-    padding: 5px 20px;
+    padding: 0px 20px;
+    font-size: 18px;
+    margin: 1px;
 }
 
 div.footer h6 {
