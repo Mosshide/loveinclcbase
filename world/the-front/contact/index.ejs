@@ -8,21 +8,23 @@
         the following form to send us an email.
     </p>
 
-    <h3>Name*</h3>
-    <input type="text" id="name" required>
-
-    <h3>Email*</h3>
-    <input type="email" id="email" required>
-
-    <h3>Message*</h3>
-    <textarea id="message" required></textarea>
-
-    <h3>Phone*</h3>
-    <input type="tel" id="phone" required>
-
-    <!-- Captcha -->
-
-    <button id="submit">Submit</button>
+    <div class="form">
+        <h3>Name*</h3>
+        <input type="text" id="name" required>
+    
+        <h3>Email*</h3>
+        <input type="email" id="email" required>
+    
+        <h3>Message*</h3>
+        <textarea id="message" required></textarea>
+    
+        <h3>Phone*</h3>
+        <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+    
+        <!-- Captcha -->
+    
+        <button id="submit">Submit</button>
+    </div>
 </div>
 
 <div class="side">
