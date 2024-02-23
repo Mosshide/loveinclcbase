@@ -172,6 +172,7 @@ hr {
     flex-wrap: wrap;
     width: 100%;
     min-height: 250px;
+    padding: 10px;
 }
 
 .buttons a {
@@ -180,7 +181,7 @@ hr {
     border: 5px solid var(--main-color);
     border-radius: 50%;
     position: relative;
-    margin: 15px;
+    margin: 20px;
     background-position: center !important;
 }
 
@@ -196,6 +197,11 @@ hr {
     left: 0;
     text-align: center;
     font-size: 25px;
+    height: auto;
+}
+
+.buttons a#volunteer p {
+    bottom: -70px;
 }
 
 .buttons a#donate {
@@ -206,6 +212,12 @@ hr {
 .buttons a#involve {
     background: url("/img/volunteer.gif");
     background-size: cover;
+}
+
+.buttons a#volunteer {
+    background: url("/img/volunteer.gif");
+    background-size: cover;
+    margin-bottom: 60px;
 }
 
 .buttons a#about {
@@ -273,6 +285,7 @@ img {
     flex-direction: column;
     padding: 10px;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .form .row {
@@ -316,6 +329,24 @@ img {
     margin: 10px 0;
     padding: 10px;
     font-size: 20px;
+}
+
+.form .submit {
+    height: 50px;
+    margin: 10px 0;
+    padding: 10px 30px;
+    font-size: 20px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.form .submit:hover {
+    background-color: var(--main-color-hover);
+    transition: all 0.1s;
+    cursor: pointer;
+    transform: scale(1.01);
 }
 
 /* styles for screens under 1000px wide */
