@@ -10,13 +10,13 @@ class ThemeApplicator {
         //will need to be changed when notherbase-fs updates
         if (this.path == "the-front") this.$nav.append($(`<a class="selected" href="/">Home</a>`));
         else this.$nav.append($(`<a href="/">Home</a>`));
-        if (this.path == "getInvolved") this.$nav.append($(`<a class="selected" href="/getInvolved">Get Involved</a>`));
+        if (this.path == "getInvolved") this.$nav.append($(`<a class="selected" href="/the-front/getInvolved">Get Involved</a>`));
         else this.$nav.append($(`<a href="/the-front/getInvolved">Get Involved</a>`));
-        if (this.path == "resources") this.$nav.append($(`<a class="selected" href="/resources">Resources</a>`));
+        if (this.path == "resources") this.$nav.append($(`<a class="selected" href="/the-front/resources">Resources</a>`));
         else this.$nav.append($(`<a href="/the-front/resources">Resources</a>`));
-        if (this.path == "contact") this.$nav.append($(`<a class="selected" href="/contact">Contact Us</a>`));
+        if (this.path == "contact") this.$nav.append($(`<a class="selected" href="/the-front/contact">Contact Us</a>`));
         else this.$nav.append($(`<a href="/the-front/contact">Contact Us</a>`));
-        if (this.path == "about") this.$nav.append($(`<a class="selected" href="/about">About Us</a>`));
+        if (this.path == "about") this.$nav.append($(`<a class="selected" href="/the-front/about">About Us</a>`));
         else this.$nav.append($(`<a href="/the-front/about">About Us</a>`));
         this.$body.prepend(this.$nav);
         this.$body.prepend($(`<header>
