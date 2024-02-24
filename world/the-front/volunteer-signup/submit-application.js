@@ -44,12 +44,11 @@ export default async function submitApplication(req, user) {
         ...req.body.ticket
     }
 
-    // THE FOLLOWING IMAGE SOURCES ARE TEMPORARY AND WILL NEED TO BE REPLACED WITH THE ACTUAL IMAGE SOURCES (https://www.loveincoflewiscounty.org/img/banner.jpg)
     // render the data so it is readable in the email
     // the message will need to be rendered as HTML, with line breaks converted to <br> tags
     await req.db.SendMail.send("volunteers@loveincoflewiscounty.org", `New Volunteer Application for Love INC of Lewis County`, `
         <div style="border-radius:5px; width: 90%; padding: 20px; background: rgb(242,242,245);" class="custom-email-body">
-            <img src="https://www.loveincoflewiscounty.org/build/image/2648.png?w=1500&h=425&fit=crop-48-54&s=b68fb57b38a818af110c9a98f5069ada" alt="Love INC of Lewis County Logo" style="width: 100%; height: auto;">
+            <img src="https://loveinclcbase-99e96083d1e2.herokuapp.com/img/banner.jpg" alt="Love INC of Lewis County Logo" style="width: 100%; height: auto;">
             <h1>New Volunteer Application for: ${newApplication.firstName + " " + newApplication.lastName}</h1> 
             Submitted On: ${new Date(newApplication.dateCreated).toLocaleDateString()}
             <br>
@@ -140,7 +139,7 @@ export default async function submitApplication(req, user) {
     // send a confirmation email to the user
     if (newApplication.email) await req.db.SendMail.send(newApplication.email, `Volunteer Application Sent to Love INC of Lewis County`, `
         <div style="border-radius:5px; width: 90%; padding: 20px; background: rgb(242,242,245);" class="custom-email-body">
-            <img src="https://www.loveincoflewiscounty.org/build/image/2648.png?w=1500&h=425&fit=crop-48-54&s=b68fb57b38a818af110c9a98f5069ada" alt="Love INC of Lewis County Logo" style="width: 100%; height: auto;">
+            <img src="https://loveinclcbase-99e96083d1e2.herokuapp.com/img/banner.jpg" alt="Love INC of Lewis County Logo" style="width: 100%; height: auto;">
             <h1>Thank you for applying to volunteer!</h1> 
             Your application was sent to Love INC of Lewis County on ${new Date(newApplication.dateCreated).toLocaleDateString()}.
             <br>
