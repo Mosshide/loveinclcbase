@@ -5,7 +5,7 @@
     --second-color-hover: #bdbdbd;
     --shadow: 1px 5px 14px 1px rgba(0,0,0,0.55);
 
-    --max-main-width: 1000px;
+    --max-main-width: 1200px;
 }
 
 * {
@@ -50,7 +50,7 @@ nav a {
     text-decoration: none;
     height: 100%;
     font-size: 20px;
-    padding: 10px;
+    padding: 15px;
     color: black;
 }
 
@@ -75,10 +75,57 @@ main {
     -moz-box-shadow: var(--shadow);
     box-shadow: var(--shadow);
     background: white;
-    padding: 30px;
+    padding: 20px;
 }
 
-footer {
+main h2 {
+    width: 100%;
+}
+
+h4 {
+    width: 100%;
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+h5 {
+    width: 100%;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+p {
+    width: 100%;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+h3 {
+    font-size: 23px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    justify-content: flex-start;
+}
+
+li {
+    width: 100%;
+    margin: 10px;
+}
+
+div.footer {
     width: 90%;
     max-width: var(--max-main-width);
     margin: 0;
@@ -92,24 +139,242 @@ footer {
     flex-wrap: wrap;
 }
 
-footer .view-toggle {
-    display: none;
-}
-
-footer p {
+div.footer p {
+    width: 100%;
     color: white;
-    padding: 5px 20px;
+    padding: 0px 20px;
+    font-size: 18px;
+    margin: 1px;
 }
 
-footer h6 {
+div.footer h6 {
+    width: 100%;
     color: white;
     padding: 5px 20px;
     font-weight: bold;
     font-size: 20px;
 }
 
+footer {
+    display: none;
+}
+
 hr {
     border: 1px solid var(--second-color);
     margin: 10px 0;
     width: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 250px;
+    padding: 10px;
+}
+
+.buttons a {
+    width: 170px;
+    height: 170px;
+    border: 5px solid var(--main-color);
+    border-radius: 50%;
+    position: relative;
+    margin: 20px;
+    background-position: center !important;
+}
+
+.buttons a:hover {
+    border: 7px solid var(--main-color-hover);
+    transition: all 0.1s;
+}
+
+.buttons a p {
+    position: absolute;
+    width: 100%;
+    bottom: -45px;
+    left: 0;
+    text-align: center;
+    font-size: 25px;
+    height: auto;
+}
+
+.buttons a#volunteer p {
+    bottom: -70px;
+}
+
+.buttons a#donate {
+    background: url("/img/heart.png");
+    background-size: cover;
+}
+
+.buttons a#involve {
+    background: url("/img/volunteer.gif");
+    background-size: cover;
+}
+
+.buttons a#volunteer {
+    background: url("/img/volunteer.gif");
+    background-size: cover;
+    margin-bottom: 60px;
+}
+
+.buttons a#about {
+    background: url("/img/logo icon.jpg");
+    background-size: cover;
+}
+
+.buttons a#contact {
+    background: url("/img/cloud.jpg");
+    background-size: cover;
+}
+
+.info {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.side {
+    width: 30%;
+    border-left: 1px solid var(--second-color);
+    padding: 10px;
+}
+
+.side .quote {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 450px;
+}
+
+.side .quote .text {
+    width: 70%;
+    height: auto;
+    margin: 10px;
+    margin-bottom: 2px;
+    font-size: 25px;
+}
+
+.side .quote .reference {
+    font-size: 23px;
+    text-align: right;
+}
+
+.side .thanks {
+    margin: 20px;
+    font-size: 25px;
+}
+
+.selected {
+    background-color: var(--main-color);
+    color: white;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.form .row {
+    width: 100%;
+    display: flex;
+}
+
+.form .row label {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.form input {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.form select {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.form input[type="radio"] {
+    width: 50px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.form textarea {
+    width: 100%;
+    height: 150px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.form .submit {
+    height: 50px;
+    margin: 10px 0;
+    padding: 10px 30px;
+    font-size: 20px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.form .submit:hover {
+    background-color: var(--main-color-hover);
+    transition: all 0.1s;
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+/* styles for screens under 1000px wide */
+@media only screen and (max-width: 1000px) {
+    main {
+        width: 98%;
+        padding: 10px;
+    }
+    
+    div.footer {
+        width: 98%;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .side {
+        width: 100%;
+        border-left: none;
+    }
+
+    .buttons a {
+        width: 100px;
+        height: 100px;
+    }
+
+    .buttons a p {
+        bottom: -35px;
+    }
 }
