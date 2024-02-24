@@ -76,6 +76,7 @@
 </p>
 
 <div class="form">
+    <p>Fields marked with * are required to be filled.</p>
     <h3>Name*</h3>
     <div class="row">
         <input type="text" id="first-name" placeholder="First Name">
@@ -156,10 +157,11 @@
 <h2>Statement of Faith Agreement</h2>
 <hr>
 <div class="form">
+    <p>Fields marked with * are required to be filled.</p>
     <h3>Personal Testimony</h3>
     <textarea id="testimony" placeholder="Please provide a brief personal testimony"></textarea>
     <h3>Statement of Faith Electronic Signature*</h3>
-    <input type="text" id="faith-signature" placeholder="First and Last Name">
+    <input type="text" id="faith-signature" placeholder="Full Name">
     <h3>Statement of Faith Signature Date*</h3>
     <input type="date" id="faith-date">
 </div>
@@ -167,11 +169,12 @@
 <h2>Background Check Agreement</h2>
 <hr>
 <div class="form">
-    <h3>First Name</h3>
+    <p>Fields marked with * are required to be filled.</p>
+    <h3>First Name*</h3>
     <input type="text" id="background-first" placeholder="First Name">
     <h3>Middle Name</h3>
     <input type="text" id="background-middle" placeholder="Middle Name">
-    <h3>Last Name</h3>
+    <h3>Last Name*</h3>
     <input type="text" id="background-last" placeholder="Last Name">
     <h3>Alias / Maiden Name</h3>
     <input type="text" id="background-alias" placeholder="Alias / Maiden Name">
@@ -195,10 +198,102 @@
     
     <!-- Captcha -->
     
-    <button class="submit">Submit</button>
+    <button class="submit" onclick="submitApplication()">Submit</button>
 </div>
 
 <script src="/js/themeApplicator.js"></script>
 <script>
     const themeApplicator = new ThemeApplicator();
+
+    const submitApplication = function() {
+        let firstName = $("#first-name").val();
+        let lastName = $("#last-name").val();
+        let telephone = $("#telephone").val();
+        let email = $("#email").val();
+        let address = $("#address").val();
+        let city = $("#city").val();
+        let state = $("#state").val();
+        let zip = $("#zip").val();
+        let country = $("#country").val();
+        let dob = $("#dob").val();
+        let pob = $("#pob").val();
+        let church = $("#church").val();
+        let member = $("input[name='member']:checked").val();
+        let years = $("#years").val();
+        let pastor = $("#pastor").val();
+        let ref1 = $("#ref1").val();
+        let ref1Phone = $("#ref1-phone").val();
+        let ref2 = $("#ref2").val();
+        let ref2Phone = $("#ref2-phone").val();
+        let ref3 = $("#ref3").val();
+        let ref3Phone = $("#ref3-phone").val();
+        let reason = $("#reason").val();
+        let education = $("#education").val();
+        let employment = $("#employment").val();
+        let military = $("input[name='military']:checked").val();
+        let interests = $("#interests").val();
+        let support = $("#support").val();
+
+        let testimony = $("#testimony").val();
+        let faithSignature = $("#faith-signature").val();
+        let faithDate = $("#faith-date").val();
+
+        let backgroundFirst = $("#background-first").val();
+        let backgroundMiddle = $("#background-middle").val();
+        let backgroundLast = $("#background-last").val();
+        let backgroundAlias = $("#background-alias").val();
+        let backgroundDob = $("#background-dob").val();
+        let backgroundGender = $("input[name='gender']:checked").val();
+        let backgroundSignature = $("#background-signature").val();
+        let backgroundDate = $("#background-date").val();
+
+        // if the fields marked with * are filled out
+        if (firstName && lastName && faithSignature && faithDate 
+        && backgroundFirst && backgroundLast && backgroundDob 
+        && backgroundGender && backgroundSignature && backgroundDate) {
+            base.do("submit-application", {
+                firstName: firstName,
+                lastName: lastName,
+                telephone: telephone,
+                email: email,
+                address: address,
+                city: city,
+                state: state,
+                zip: zip,
+                country: country,
+                dob: dob,
+                pob: pob,
+                church: church,
+                member: member,
+                years: years,
+                pastor: pastor,
+                ref1: ref1,
+                ref1Phone: ref1Phone,
+                ref2: ref2,
+                ref2Phone: ref2Phone,
+                ref3: ref3,
+                ref3Phone: ref3Phone,
+                reason: reason,
+                education: education,
+                employment: employment,
+                military: military,
+                interests: interests,
+                support: support,
+                testimony: testimony,
+                faithSignature: faithSignature,
+                faithDate: faithDate,
+                backgroundFirst: backgroundFirst,
+                backgroundMiddle: backgroundMiddle,
+                backgroundLast: backgroundLast,
+                backgroundAlias: backgroundAlias,
+                backgroundDob: backgroundDob,
+                backgroundGender: backgroundGender,
+                backgroundSignature: backgroundSignature,
+                backgroundDate: backgroundDate
+            });
+            alert('Thank you for your application! We will get back to you as soon as possible.');
+        } else {
+            alert('Please fill out all required fields.');
+        }
+    }
 </script>
