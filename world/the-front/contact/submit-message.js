@@ -19,7 +19,7 @@ export default async function submitMessage(req, user) {
             <br>
             Phone Number: ${newMessage.phone}
             <br>
-            Submitted On: ${new Date(newMessage.dateCreated + "T00:00:00").toLocaleDateString()}
+            Submitted On: ${new Date(newMessage.dateCreated).toLocaleDateString()}
             <br>
             Message: ${newMessage.message.replace(/\n/g, "<br>")}
             <br>
@@ -44,7 +44,7 @@ export default async function submitMessage(req, user) {
         <div style="border-radius:5px; width: 90%; padding: 20px; background: rgb(242,242,245);" class="custom-email-body">
             <img src="https://www.loveincoflewiscounty.org/build/image/2648.png?w=1500&h=425&fit=crop-48-54&s=b68fb57b38a818af110c9a98f5069ada" alt="Love INC of Lewis County Logo" style="width: 100%; height: auto;">
             <h1>Thank you for reaching out!</h1> 
-            Your message was sent to Love INC of Lewis County on ${new Date(newMessage.dateCreated + "T00:00:00").toLocaleDateString()}.
+            Your message was sent to Love INC of Lewis County on ${new Date(newMessage.dateCreated).toLocaleDateString()}.
             <br>
             <p>We will reply as soon as we are able. Thank you for your patience!
             <br>
