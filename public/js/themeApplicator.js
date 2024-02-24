@@ -3,9 +3,7 @@ class ThemeApplicator {
         this.$body = $("body");
         this.$body.prepend($(`<img class="hero" src="/img/banner.jpg">`));
         this.path = window.location.pathname.split('/');
-        console.log(this.path);
         this.path = this.path[this.path.length - 1];
-        console.log(this.path);
         this.$nav = $(`<nav></nav>`);
         //will need to be changed when notherbase-fs updates
         if (this.path == "the-front") this.$nav.append($(`<a class="selected" href="/">Home</a>`));

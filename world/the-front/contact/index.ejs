@@ -9,6 +9,7 @@
     </p>
 
     <div class="form">
+        <p>Fields marked with * are required to be filled.</p>
         <h3>Name*</h3>
         <input type="text" id="name" required>
     
@@ -23,7 +24,7 @@
     
         <!-- Captcha -->
     
-        <button class="submit">Submit</button>
+        <button class="submit" onclick="submitMessage()">Submit</button>
     </div>
 </div>
 
@@ -37,4 +38,24 @@
 <script src="/js/themeApplicator.js"></script>
 <script>
     const themeApplicator = new ThemeApplicator();
+
+    const submitMessage = function() {
+        let name = $("#name").val();
+        let email = $("#email").val();
+        let message = $("#message").val();
+        let phone = $("#phone").val();
+
+        if (name && email && message && phone) {
+            base.do("submit-message", {
+                name: name,
+                email: email,
+                message: message,
+                phone: phone
+            });
+            alert('Thank you for your message! We will get back to you as soon as possible.');
+            $("#message").val("");
+        } else {
+            alert('Please fill out all required fields.');
+        }
+    }
 </script>
