@@ -1,5 +1,8 @@
 class ThemeApplicator {
     constructor() {
+        this.$head = $("head");
+        this.$head.append($(`<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">`));
+
         this.$body = $("body");
         this.$body.prepend($(`<img class="hero" src="/img/banner.jpg">`));
         this.path = window.location.pathname.split('/');
@@ -16,6 +19,8 @@ class ThemeApplicator {
         else this.$nav.append($(`<a href="/the-front/contact">Contact Us</a>`));
         if (this.path == "about") this.$nav.append($(`<a class="selected" href="/the-front/about">About Us</a>`));
         else this.$nav.append($(`<a href="/the-front/about">About Us</a>`));
+        this.$closeNav = $(`<button id="close-nav"><i class="fa-solid fa-xmark"></i></button>`).appendTo(this.$nav);
+        this.$closeNav.click(() => this.disableNavMobile());
         this.$body.prepend(this.$nav);
         this.$body.prepend($(`<header>
                 <a href="/">
@@ -29,5 +34,19 @@ class ThemeApplicator {
         this.$footer.append($("<p>PO Box 152</p>"));
         this.$footer.append($("<p>Chehalis, WA 98532</p>"));
         this.$footer.append($("<p>360-748-8611</p>"));
+
+        this.$main = $("main");
+        this.$navButton = $("<button id='nav-button'><i class='fa-solid fa-bars'></i></button>").prependTo(this.$main);
+        this.$navButton.click(() => this.enableNavMobile());
+    }
+
+    enableNavMobile() {
+        this.$nav.addClass("mobile-full");
+        window.onscroll = function () {  window.scrollTo(0, 0); };
+    }
+
+    disableNavMobile() {
+        this.$nav.removeClass("mobile-full");
+        window.onscroll = function () {};
     }
 }
