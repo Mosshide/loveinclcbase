@@ -50,12 +50,14 @@ class ThemeApplicator {
 
     enableNavMobile() {
         this.$nav.addClass("mobile-full");
-        window.scrollTo(0, 0);
-        window.onscroll = function () {  window.scrollTo(0, 0); };
+        this.$main.addClass("nav-open");
+        // window.scrollTo(0, 0);
+        // window.onscroll = function () {  window.scrollTo(0, 0); };
     }
 
     disableNavMobile() {
         this.$nav.removeClass("mobile-full");
-        window.onscroll = function () {};
+        this.$main.removeClass("nav-open");
+        //window.onscroll = function () {};
     }
 }
