@@ -216,12 +216,11 @@ hr {
 
 .buttons {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
     min-height: 250px;
-    padding: 10px;
     margin: 30px 0;
 }
 
@@ -231,7 +230,7 @@ hr {
     border: 5px solid var(--main-color);
     border-radius: 50%;
     position: relative;
-    margin: 20px;
+    margin: 30px 0;
     background-position: center !important;
 }
 
@@ -242,9 +241,9 @@ hr {
 
 .buttons a p {
     position: absolute;
-    width: calc(100% + 20px);
-    bottom: -45px;
-    left: -10px;
+    width: calc(100% + 40px);
+    bottom: -50px;
+    left: -20px;
     text-align: center;
     font-size: 25px;
     height: auto;
@@ -434,6 +433,7 @@ img {
     .buttons {
         align-items: flex-start;
         min-height: 150px;
+        gap: 20px;
     }
 
     .buttons a {
@@ -441,12 +441,8 @@ img {
         height: 100px;
     }
 
-    .buttons a p {
-        bottom: -35px;
-    }
-
     .buttons a#volunteer p {
-        bottom: -90px;
+        bottom: -80px;
     }
 
     nav {
@@ -492,9 +488,5 @@ img {
 
     header {
         height: 80px;
-    }
-
-    .buttons a#contact p {
-        bottom: -60px;
     }
 }
