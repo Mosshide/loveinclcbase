@@ -1,6 +1,6 @@
 <div class="info">
     <h2>Contact Us</h2>
-    
+    <hr>
     <p><strong>If you are in need of assistance, please call us at (360) 748-8611.</strong></p>
 
     <p>
@@ -25,6 +25,8 @@
         <!-- Captcha -->
     
         <button class="submit" onclick="submitMessage()">Submit</button>
+
+        <p class="invisible" id="alert"></p>
     </div>
 </div>
 
@@ -39,23 +41,27 @@
 <script>
     const themeApplicator = new ThemeApplicator();
 
-    const submitMessage = function() {
+    const submitMessage = async function() {
         let name = $("#name").val();
         let email = $("#email").val();
         let message = $("#message").val();
         let phone = $("#phone").val();
 
+        $("#alert").removeClass("invisible");
         if (name && email && message && phone) {
-            base.do("submit-message", {
+            let res = await base.do("submit-message", {
+                route: "/the-front/contact",
                 name: name,
                 email: email,
                 message: message,
                 phone: phone
             });
-            alert('Thank you for your message! We will get back to you as soon as possible.');
+
+            if (res.status == "success") $("#alert").text(res.data);
+            else $("#alert").text("There was an error submitting your application. Please try again later.");
             $("#message").val("");
         } else {
-            alert('Please fill out all required fields.');
+            $("#alert").text('Please fill out all required fields.');
         }
     }
 </script>

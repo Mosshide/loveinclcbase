@@ -1,4 +1,5 @@
-<h2>Are you interested in volunteering at Love INC?</h2>
+<h2>Interested in volunteering at Love INC?</h2>
+<hr>
 <p>
     There are many opportunities to volunteer both in the office and outside 
     (taking items to those in need, running errands, etc.) that can be done by volunteers.
@@ -16,7 +17,7 @@
     These forms will ask for personal information for purposes of matching volunteers 
     with the duties at Love INC of Lewis County, which is a non-profit organization.
 </p>
-<a href="/documents/volunteer-application.pdf" download>
+<a class="link-button" href="/documents/volunteer-application.pdf" download>
     <button>Download Volunteer Application</button>
 </a>
 <br>
@@ -199,13 +200,15 @@
     <!-- Captcha -->
     
     <button class="submit" onclick="submitApplication()">Submit</button>
+
+    <p id="alert"></p>
 </div>
 
 <script src="/js/themeApplicator.js"></script>
 <script>
     const themeApplicator = new ThemeApplicator();
 
-    const submitApplication = function() {
+    const submitApplication = async function() {
         let firstName = $("#first-name").val();
         let lastName = $("#last-name").val();
         let telephone = $("#telephone").val();
@@ -251,7 +254,8 @@
         if (firstName && lastName && faithSignature && faithDate 
         && backgroundFirst && backgroundLast && backgroundDob 
         && backgroundGender && backgroundSignature && backgroundDate) {
-            base.do("submit-application", {
+            let res = await base.do("submit-application", {
+                route: "/the-front/volunteer-signup",
                 firstName: firstName,
                 lastName: lastName,
                 telephone: telephone,
@@ -291,9 +295,11 @@
                 backgroundSignature: backgroundSignature,
                 backgroundDate: backgroundDate
             });
-            alert('Thank you for your application! We will get back to you as soon as possible.');
+            
+            if (res.status == "success") $("#alert").text(res.data);
+            else $("#alert").text("There was an error submitting your application. Please try again later.");
         } else {
-            alert('Please fill out all required fields.');
+            $("#alert").text('Please fill out all required fields.');
         }
     }
 </script>

@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/Mosshide/loveinclcbase#readme",
   "dependencies": {
-    "notherbase-fs": "^3.2.18"
+    "notherbase-fs": "^3.2.21"
   },
   "type": "module"
 }

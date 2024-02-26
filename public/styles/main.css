@@ -1,6 +1,6 @@
 :root {
     --main-color: rgb(58, 111, 190);
-    --main-color-hover: rgb(143, 178, 231);
+    --main-color-hover: rgb(74, 136, 230);
     --second-color: #f2f2f2;
     --second-color-hover: #bdbdbd;
     --shadow: 1px 5px 14px 1px rgba(0,0,0,0.55);
@@ -14,12 +14,17 @@
     box-sizing: border-box;
 }
 
+.invisible {
+    display: none !important;
+}
+
 body {
     margin: 0;
     background: var(--second-color);
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 header {
@@ -36,6 +41,36 @@ header img {
     padding: 10px;
 }
 
+a.link-button {
+    text-decoration: none;
+}
+
+button {
+    width: auto;
+    height: auto;
+    background: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    padding: 10px 30px;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+
+button i {
+    padding-top: 1px;
+}
+
+button:hover {
+    background: var(--main-color-hover);
+    transition: all 0.1s;
+    transform: scale(1.01);
+}
+
 nav {
     width: 100%;
     height: 50px;
@@ -44,6 +79,11 @@ nav {
     border-bottom: 3px solid var(--main-color);
     display: flex;
     justify-content: center;
+    overflow: hidden;
+}
+
+nav #close-nav {
+    display: none;
 }
 
 nav a {
@@ -76,22 +116,33 @@ main {
     box-shadow: var(--shadow);
     background: white;
     padding: 20px;
+    position: relative;
+    justify-content: center;
 }
 
-main h2 {
+main #nav-button {
+    display: none;
+}
+
+h2 {
     width: 100%;
+    font-size: 30px;
+    margin: 5px 0;
+    margin-top: 40px;
 }
 
 h4 {
     width: 100%;
     font-size: 25px;
-    margin: 5px 0;
+    margin: 0;
+    margin-top: 20px;
 }
 
 h5 {
     width: 100%;
     font-size: 20px;
-    margin: 5px 0;
+    margin: 0;
+    margin-top: 20px;
 }
 
 p {
@@ -100,15 +151,10 @@ p {
     margin: 5px 0;
 }
 
-h2 {
-    font-size: 30px;
-    margin: 5px 0;
-    width: 100%;
-}
-
 h3 {
     font-size: 23px;
-    margin: 5px 0;
+    margin: 0;
+    margin-top: 20px;
     width: 100%;
 }
 
@@ -173,6 +219,7 @@ hr {
     width: 100%;
     min-height: 250px;
     padding: 10px;
+    margin: 30px 0;
 }
 
 .buttons a {
@@ -192,9 +239,9 @@ hr {
 
 .buttons a p {
     position: absolute;
-    width: 100%;
+    width: calc(100% + 20px);
     bottom: -45px;
-    left: 0;
+    left: -10px;
     text-align: center;
     font-size: 25px;
     height: auto;
@@ -235,6 +282,10 @@ hr {
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
+}
+
+.info.full {
+    width: 100%;
 }
 
 .side {
@@ -331,28 +382,32 @@ img {
     font-size: 20px;
 }
 
-.form .submit {
-    height: 50px;
-    margin: 10px 0;
-    padding: 10px 30px;
+#alert {
+    width: 100%;
+    padding: 10px;
     font-size: 20px;
-    background-color: var(--main-color);
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-
-.form .submit:hover {
-    background-color: var(--main-color-hover);
-    transition: all 0.1s;
-    cursor: pointer;
-    transform: scale(1.01);
+    color: rgb(32, 32, 46);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* styles for screens under 1000px wide */
 @media only screen and (max-width: 1000px) {
     main {
         width: 98%;
+        padding: 10px;
+        margin: 2px 0;
+    }
+
+    main #nav-button {
+        display: flex;
+        position: absolute;
+        right: 3px;
+        top: 3px;
+        font-family: sans-serif;
+        width: 40px;
+        height: 40px;
         padding: 10px;
     }
     
@@ -367,6 +422,12 @@ img {
     .side {
         width: 100%;
         border-left: none;
+        border-top: 1px solid var(--second-color);
+    }
+
+    .buttons {
+        align-items: flex-start;
+        min-height: 150px;
     }
 
     .buttons a {
@@ -376,5 +437,56 @@ img {
 
     .buttons a p {
         bottom: -35px;
+    }
+
+    .buttons a#volunteer p {
+        bottom: -90px;
+    }
+
+    nav {
+        height: 0;
+        z-index: 1;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        position: sticky !important;
+        top: 0;
+        left: 0;
+    }
+
+    nav a {
+        height: auto;
+        width: 100%;
+    }
+
+    nav.mobile-full {
+        height: 100vh;
+        position: absolute;
+    }
+
+    nav #close-nav {
+        display: none;
+        position: absolute;
+        right: 10px;
+        bottom: 50px;
+        font-family: sans-serif;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
+
+    nav.mobile-full #close-nav {
+        display: flex;
+    }
+
+    img.hero {
+        height: auto;
+    }
+
+    header {
+        display: none;
+    }
+
+    .buttons a#contact p {
+        bottom: -60px;
     }
 }
