@@ -9,16 +9,16 @@ class ThemeApplicator {
         this.path = this.path[this.path.length - 1];
         this.$nav = $(`<nav></nav>`);
         //will need to be changed when notherbase-fs updates
-        if (this.path == "the-front") this.$nav.append($(`<a class="selected" href="/">Home</a>`));
-        else this.$nav.append($(`<a href="/">Home</a>`));
-        if (this.path == "getInvolved") this.$nav.append($(`<a class="selected" href="/the-front/getInvolved">Get Involved</a>`));
-        else this.$nav.append($(`<a href="/the-front/getInvolved">Get Involved</a>`));
-        if (this.path == "resources") this.$nav.append($(`<a class="selected" href="/the-front/resources">Resources</a>`));
-        else this.$nav.append($(`<a href="/the-front/resources">Resources</a>`));
-        if (this.path == "contact") this.$nav.append($(`<a class="selected" href="/the-front/contact">Contact Us</a>`));
-        else this.$nav.append($(`<a href="/the-front/contact">Contact Us</a>`));
-        if (this.path == "about") this.$nav.append($(`<a class="selected" href="/the-front/about">About Us</a>`));
-        else this.$nav.append($(`<a href="/the-front/about">About Us</a>`));
+        if (this.path == "the-front") this.$nav.append($(`<a class="selected" href="/the-front">Home</a>`));
+        else this.$nav.append($(`<a href="/the-front">Home</a>`));
+        if (this.path == "getInvolved") this.$nav.append($(`<a class="selected" href="/getInvolved">Get Involved</a>`));
+        else this.$nav.append($(`<a href="/getInvolved">Get Involved</a>`));
+        if (this.path == "resources") this.$nav.append($(`<a class="selected" href="/resources">Resources</a>`));
+        else this.$nav.append($(`<a href="/resources">Resources</a>`));
+        if (this.path == "contact") this.$nav.append($(`<a class="selected" href="/contact">Contact Us</a>`));
+        else this.$nav.append($(`<a href="/contact">Contact Us</a>`));
+        if (this.path == "about") this.$nav.append($(`<a class="selected" href="/about">About Us</a>`));
+        else this.$nav.append($(`<a href="/about">About Us</a>`));
         this.$closeNav = $(`<button id="close-nav"><i class="fa-solid fa-xmark"></i></button>`).appendTo(this.$nav);
         this.$closeNav.click(() => this.disableNavMobile());
         this.$body.prepend(this.$nav);
