@@ -1,10 +1,22 @@
 class ThemeApplicator {
-    constructor() {
+    constructor(settings) {
+        this.settings = {
+            hero: false,
+            ...settings
+        };
+
         this.$head = $("head");
         this.$head.append($(`<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">`));
 
+        this.$main = $("main");
+        this.$navButton = $("<button id='nav-button'><i class='fa-solid fa-bars'></i></button>").prependTo(this.$main);
+        this.$navButton.click(() => this.enableNavMobile());
+
         this.$body = $("body");
-        this.$body.prepend($(`<img class="hero" src="/img/banner.jpg">`));
+        if (this.settings.hero) {
+            this.$body.prepend($(`<img class="hero" src="/img/banner.jpg">`));
+            this.$main.addClass("heroed");
+        }
         this.path = window.location.pathname.split('/');
         this.path = this.path[this.path.length - 1];
         this.$nav = $(`<nav></nav>`);
@@ -33,15 +45,12 @@ class ThemeApplicator {
         this.$footer.append($("<p>Love INC of Lewis County</p>"));
         this.$footer.append($("<p>PO Box 152</p>"));
         this.$footer.append($("<p>Chehalis, WA 98532</p>"));
-        this.$footer.append($("<p>360-748-8611</p>"));
-
-        this.$main = $("main");
-        this.$navButton = $("<button id='nav-button'><i class='fa-solid fa-bars'></i></button>").prependTo(this.$main);
-        this.$navButton.click(() => this.enableNavMobile());
+        this.$footer.append($("<p>360-748-8611</p>"));       
     }
 
     enableNavMobile() {
         this.$nav.addClass("mobile-full");
+        window.scrollTo(0, 0);
         window.onscroll = function () {  window.scrollTo(0, 0); };
     }
 
