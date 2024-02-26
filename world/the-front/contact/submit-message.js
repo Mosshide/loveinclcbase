@@ -9,7 +9,7 @@ export default async function submitMessage(req, user) {
     }
 
     // require a cooldown between messages of 1 minute
-    if (!req.session.lastApplication) req.session.lastMessage = 0;
+    if (!req.session.lastMessage) req.session.lastMessage = 0;
     if (Date.now() - req.session.lastMessage < 30000) return "Thank you! Please wait before submitting another message.";
     else {
         // render the data so it is readable in the email
