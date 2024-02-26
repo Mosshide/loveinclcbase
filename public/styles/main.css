@@ -100,7 +100,7 @@ nav a:hover {
 
 img.hero {
     width: 100%;
-    height: 450px;
+    height: auto;
     object-fit: cover;
 }
 
@@ -108,7 +108,6 @@ main {
     width: 90%;
     max-width: var(--max-main-width);
     min-height: 100px;
-    margin-top: -20px;
     display: flex;
     flex-wrap: wrap;
     -webkit-box-shadow: var(--shadow);
@@ -118,6 +117,10 @@ main {
     padding: 20px;
     position: relative;
     justify-content: center;
+}
+
+main.heroed {
+    margin-top: -20px;
 }
 
 main #nav-button {
@@ -290,8 +293,7 @@ hr {
 
 .side {
     width: 30%;
-    border-left: 1px solid var(--second-color);
-    padding: 10px;
+    padding: 20px;
 }
 
 .side .quote {
