@@ -155,6 +155,25 @@ p {
     margin: 5px 0;
 }
 
+a {
+    font-size: 20px;
+}
+
+a.external {
+    text-decoration: none;
+    background: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+}
+
+a.external:hover {
+    background: var(--main-color-hover);
+    transition: all 0.1s;
+    transform: scale(1.01);
+}
+
 h3 {
     font-size: 23px;
     margin: 0;
