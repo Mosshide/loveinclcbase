@@ -4,8 +4,7 @@
     --second-color: #f2f2f2;
     --second-color-hover: #bdbdbd;
     --shadow: 1px 5px 14px 1px rgba(0,0,0,0.55);
-
-    --max-main-width: 1200px;
+    --max-main-width: 1000px;
 }
 
 * {
@@ -15,8 +14,20 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.invisible {
-    display: none !important;
+/* elements */
+main {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+    background: white;
+    padding: 0;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
 }
 
 body {
@@ -26,6 +37,11 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 header {
@@ -42,8 +58,19 @@ header img {
     padding: 10px;
 }
 
-a.link-button {
-    text-decoration: none;
+section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+}
+
+section p {
+    width: 100%;
+    max-width: var(--max-main-width);
 }
 
 button {
@@ -62,7 +89,7 @@ button {
     justify-content: center;
 }
 
-button i {
+i {
     padding-top: 1px;
 }
 
@@ -72,6 +99,69 @@ button:hover {
     transform: scale(1.01);
 }
 
+h2 {
+    width: 100%;
+    font-size: 30px;
+    margin: 5px 0;
+    margin-top: 40px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 23px;
+    margin: 0;
+    margin-top: 20px;
+    width: 100%;
+}
+
+h4 {
+    width: 100%;
+    font-size: 25px;
+    margin: 0;
+    margin-top: 20px;
+}
+
+h5 {
+    width: 100%;
+    font-size: 20px;
+    margin: 0;
+    margin-top: 20px;
+}
+
+p {
+    width: 100%;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+a {
+    font-size: 20px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    justify-content: flex-start;
+}
+
+li {
+    width: 100%;
+    margin: 10px;
+}
+
+footer {
+    display: none;
+}
+
+hr {
+    border: 1px solid var(--second-color);
+    margin: 10px 0;
+    width: 100%;
+}
+
+/* national bar */
 div.national {
     width: 100%;
     height: 55px;
@@ -125,6 +215,7 @@ div.national a {
     color: #f2f2f2;
 }
 
+/* nav bar */
 nav {
     width: 100%;
     height: 80px;
@@ -196,60 +287,29 @@ nav a p {
     padding: 20px;
 }
 
+/* globals */
+#alert {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    color: rgb(32, 32, 46);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invisible {
+    display: none !important;
+}
+
 img.hero {
     width: 100%;
     height: 400px;
     object-fit: cover;
 }
 
-main {
-    width: 100%;
-    min-height: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    -webkit-box-shadow: var(--shadow);
-    -moz-box-shadow: var(--shadow);
-    box-shadow: var(--shadow);
-    background: white;
-    padding: 0;
-    position: relative;
-    justify-content: center;
-    overflow: hidden;
-}
-
 main #nav-button {
     display: none;
-}
-
-h2 {
-    width: 100%;
-    font-size: 30px;
-    margin: 5px 0;
-    margin-top: 40px;
-}
-
-h4 {
-    width: 100%;
-    font-size: 25px;
-    margin: 0;
-    margin-top: 20px;
-}
-
-h5 {
-    width: 100%;
-    font-size: 20px;
-    margin: 0;
-    margin-top: 20px;
-}
-
-p {
-    width: 100%;
-    font-size: 20px;
-    margin: 5px 0;
-}
-
-a {
-    font-size: 20px;
 }
 
 a.external {
@@ -265,26 +325,6 @@ a.external:hover {
     background: var(--main-color-hover);
     transition: all 0.1s;
     transform: scale(1.01);
-}
-
-h3 {
-    font-size: 23px;
-    margin: 0;
-    margin-top: 20px;
-    width: 100%;
-}
-
-ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    list-style: none;
-    justify-content: flex-start;
-}
-
-li {
-    width: 100%;
-    margin: 10px;
 }
 
 div.footer {
@@ -316,16 +356,64 @@ div.footer h6 {
     font-size: 20px;
 }
 
-footer {
-    display: none;
+.selected {
+    background-color: var(--main-color);
+    color: white;
 }
 
-hr {
-    border: 1px solid var(--second-color);
-    margin: 10px 0;
+.form {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
+.form .row {
+    width: 100%;
+    display: flex;
+}
+
+.form .row label {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.form input {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.form select {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.form input[type="radio"] {
+    width: 50px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.form textarea {
+    width: 100%;
+    height: 150px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* old sections */
 .buttons {
     display: flex;
     justify-content: center;
@@ -398,6 +486,10 @@ hr {
     background-size: cover;
 }
 
+a.link-button {
+    text-decoration: none;
+}
+
 .info {
     width: 70%;
     display: flex;
@@ -438,78 +530,6 @@ hr {
 .side .thanks {
     margin: 20px;
     font-size: 25px;
-}
-
-.selected {
-    background-color: var(--main-color);
-    color: white;
-}
-
-img {
-    width: 100%;
-    height: auto;
-}
-
-.form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.form .row {
-    width: 100%;
-    display: flex;
-}
-
-.form .row label {
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    margin: 10px 0;
-    padding: 10px;
-}
-
-.form input {
-    width: 100%;
-    height: 40px;
-    margin: 10px 0;
-    padding: 10px;
-    font-size: 20px;
-}
-
-.form select {
-    width: 100%;
-    height: 40px;
-    margin: 10px 0;
-    padding: 10px;
-    font-size: 20px;
-}
-
-.form input[type="radio"] {
-    width: 50px;
-    margin: 10px 0;
-    padding: 10px;
-}
-
-.form textarea {
-    width: 100%;
-    height: 150px;
-    margin: 10px 0;
-    padding: 10px;
-    font-size: 20px;
-}
-
-#alert {
-    width: 100%;
-    padding: 10px;
-    font-size: 20px;
-    color: rgb(32, 32, 46);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* styles for screens under 1000px wide */
