@@ -24,7 +24,7 @@ class ThemeApplicator {
         // add the nav
         this.$nav = $(`<nav></nav>`).prependTo(this.$body);
         // add the logo
-        this.$nav.append($(`<a class="nav-header" href="/"><img src="/img/loveinclc-logo.jpg" alt="Love INC of Lewis County"></a>`));
+        this.$nav.append($(`<a class="nav-header" href="/"><img src="/img/loveinclc-logo-transparent.png" alt="Love INC of Lewis County"></a>`));
         // add the nav items
         this.$navItems = $(`<ul></ul>`).appendTo(this.$nav);
         if (this.path == "the-front") this.$navItems.append($(`<a class="selected" href="/the-front"><p>Home</p></a>`));
@@ -47,7 +47,7 @@ class ThemeApplicator {
         // add the Love INC National logo container
         this.$nationalLogoItems = $(`<div class="logo-items"></div>`).appendTo(this.$national);
         // add the Love INC logo
-        this.$nationalLogoItems.append($(`<img src="/img/favicon.png" alt="Love INC Logo">`));
+        this.$nationalLogoItems.append($(`<img src="/img/logo-icon-transparent-mono-mini.png" alt="Love INC Logo">`));
         // add the Love INC National link
         this.$nationalLogoItems.append($(`<p>AN AFFILIATE OF <a href="https://loveinc.org" target="_blank">LOVE IN THE NAME OF CHRIST NATIONAL</a></p>`));
         // add the Love INC National items

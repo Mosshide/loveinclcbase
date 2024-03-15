@@ -1,10 +1,12 @@
 :root {
     --main-color: rgb(58, 111, 190);
     --main-color-hover: rgb(74, 136, 230);
-    --second-color: #f2f2f2;
-    --second-color-hover: #bdbdbd;
+    --second-color: #ffffff;
+    --second-color-hover: #e2e2e2;
     --shadow: 1px 5px 14px 1px rgba(0,0,0,0.55);
     --max-main-width: 1000px;
+    --border-radius: 10px;
+    --button-scale: scale(1.01);
 }
 
 * {
@@ -64,8 +66,9 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 70px 10px;
     flex-direction: column;
+    min-height: 20px;
 }
 
 section p {
@@ -79,7 +82,7 @@ button {
     background: var(--main-color);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     font-size: 18px;
     margin: 10px;
     cursor: pointer;
@@ -112,6 +115,7 @@ h3 {
     margin: 0;
     margin-top: 20px;
     width: 100%;
+    text-align: center;
 }
 
 h4 {
@@ -176,6 +180,7 @@ div.national .logo-items {
     align-items: center;
     height: 100%;
     width: auto;
+    margin-left: 10px;
 }
 
 div.national .logo-items p {
@@ -188,7 +193,7 @@ div.national .logo-items a {
 }
 
 .logo-items img {
-    height: 50%;
+    height: 30%;
     width: auto;
     margin: 5px;
     margin-left: 15px;
@@ -202,6 +207,7 @@ div.national ul {
     height: 100%;
     align-items: center;
     flex-direction: row;
+    margin-right: 10px;
 }
 
 div.national ul a {
@@ -243,32 +249,46 @@ nav ul {
 }
 
 nav ul a {
-    border-radius: 10px 10px 0 0;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
     margin: 1px;
     margin-top: 10px;
     margin-bottom: 0;
+    padding-bottom: 5px;
 }
 
 nav a {
     text-decoration: none;
     height: 100%;
     font-size: 20px;
+    font-weight: bold;
     display: flex;
     align-items: center;
-    color: black;
+    color: var(--main-color);
     text-align: center;
 }
 
 nav a:hover {
     background-color: var(--second-color-hover);
+    color: var(--main-color);
+}
+
+nav .nav-header {
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    margin-left: 15px;
+}
+
+nav .nav-header:hover {
+    background: none;
+    transform: var(--button-scale);
 }
 
 nav #donate {
     background: var(--main-color);
     color: white;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     margin: 15px;
     height: 50px;
+    padding-bottom: 0;
 }
 
 nav #donate:hover {
@@ -302,6 +322,12 @@ nav a p {
     display: none !important;
 }
 
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 img.hero {
     width: 100%;
     height: 400px;
@@ -317,8 +343,9 @@ a.external {
     background: var(--main-color);
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 30px;
+    border-radius: var(--border-radius);
+    padding: 20px 30px;
+    margin: 5px;
 }
 
 a.external:hover {
@@ -368,11 +395,6 @@ div.footer h6 {
     padding: 10px;
     align-items: center;
     margin-bottom: 30px;
-}
-
-.form .row {
-    width: 100%;
-    display: flex;
 }
 
 .form .row label {
@@ -608,7 +630,7 @@ a.link-button {
         margin: 1px;
         margin-right: 10px;
         margin-left: 0;
-        border-radius: 0 5px 5px 0;
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
     }
 
     nav #donate {
