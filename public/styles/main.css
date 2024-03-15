@@ -66,7 +66,7 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 70px 10px;
+    padding: 100px 10px;
     flex-direction: column;
     min-height: 20px;
 }
@@ -104,7 +104,8 @@ button:hover {
 
 h2 {
     width: 100%;
-    font-size: 30px;
+    max-width: var(--max-main-width);
+    font-size: 60px;
     margin: 5px 0;
     margin-top: 40px;
     text-align: center;
