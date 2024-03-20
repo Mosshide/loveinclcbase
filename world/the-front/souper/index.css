@@ -1,0 +1,35 @@
+main {
+    padding: 0;
+}
+
+img.detail {
+    width: 50%;
+}
+
+.details {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.half-box {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+/* styles for screens under 1000px wide */
+@media only screen and (max-width: 1000px) {
+    .half-box {
+        width: 100%;
+    }
+
+    img.detail {
+        width: 100%;
+    }
+}
