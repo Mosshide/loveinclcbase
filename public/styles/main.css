@@ -643,6 +643,7 @@ a.link-button {
         width: 100%;
         object-position: center;
         max-height: 100px;
+        margin-left: 0 !important;
     }
 
     nav.mobile-full {
