@@ -1,0 +1,35 @@
+:root {
+    --third-color: #f0f0f0;
+}
+
+.hero {
+    background: url('/img/Chehalis_l.jpg');
+    background-size: cover;
+    min-height: 60vh;
+}
+
+.hero * {
+    color: var(--second-color);
+}
+
+.hero h2 {
+    width: auto;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.hero>p {
+    margin-bottom: 20px;
+}
+
+.mission {
+    background: var(--main-color);
+}
+
+.trans {
+    background: var(--third-color);
+}
+
+.old {
+    background: var(--third-color);
+}

@@ -5,7 +5,7 @@
     --second-color-hover: #e2e2e2;
     --shadow: 1px 5px 14px 1px rgba(0,0,0,0.55);
     --max-main-width: 1000px;
-    --border-radius: 10px;
+    --border-radius: 15px;
     --button-scale: scale(1.01);
 }
 
@@ -674,5 +674,13 @@ a.link-button {
 
     header {
         height: 80px;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .hero h2 {
+        font-size: 45px;
     }
 }
