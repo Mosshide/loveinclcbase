@@ -22,14 +22,18 @@
     margin-bottom: 20px;
 }
 
-.mission {
-    background: var(--main-color);
-}
-
 .trans {
     background: var(--third-color);
 }
 
 .old {
     background: var(--third-color);
+}
+
+.Christ-centered {
+    background: var(--main-color);
+}
+
+.Christ-centered * {
+    color: var(--second-color);
 }
