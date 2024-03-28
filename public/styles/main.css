@@ -333,12 +333,6 @@ nav a p {
     justify-content: center;
 }
 
-img.hero {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
-
 main #nav-button {
     display: none;
 }
@@ -441,7 +435,7 @@ div.footer h6 {
 }
 
 .bar {
-    width: calc(var(--max-main-width) + ((100% - var(--max-main-width)) / 2));
+    width: calc(var(--max-main-width) + ((100% - var(--max-main-width)) / 2) + 5%);
     max-width: 100%;
     height: 75px;
     background: var(--main-color);
@@ -468,6 +462,24 @@ div.footer h6 {
 
 .central-info {
     padding: 40px 15px;
+}
+
+.hero {
+    padding: 0;
+}
+
+.fade {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 10px;
+    flex-direction: column;
+    min-height: 20px;
+    align-content: center;
+    background: rgba(1, 1, 107, 0.452);
 }
 
 /* old sections */
@@ -701,7 +713,7 @@ a.link-button {
         display: flex;
     }
 
-    .hero {
+    .fade {
         padding-top: 40px;
     }
 
