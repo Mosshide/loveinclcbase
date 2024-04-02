@@ -31,6 +31,7 @@ main {
     position: relative;
     justify-content: center;
     overflow: hidden;
+    min-height: 90vh;
 }
 
 body {
@@ -40,6 +41,7 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
+    min-height: 100vh;
 }
 
 img {
@@ -665,10 +667,6 @@ a.link-button {
         width: 40px;
         height: 40px;
         padding: 10px;
-    }
-    
-    div.footer {
-        width: 98%;
     }
 
     .info {
