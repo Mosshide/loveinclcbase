@@ -15,7 +15,8 @@
 
 .hero h2 {
     width: auto;
-    max-width: 100%;
+    max-width: var(--max-main-width);
+    margin: 0;
     margin-bottom: 20px;
 }
 
@@ -27,7 +28,7 @@
     background: var(--third-color);
 }
 
-.old {
+.news {
     background: var(--third-color);
 }
 
