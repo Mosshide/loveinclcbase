@@ -331,6 +331,10 @@ nav a p {
     display: none !important;
 }
 
+.half {
+    width: 50% !important;
+}
+
 .row {
     width: 100%;
     display: flex;
