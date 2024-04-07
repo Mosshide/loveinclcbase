@@ -53,7 +53,7 @@ class ThemeApplicator {
         // add the Love INC National items
         this.$nationalItems = $(`<ul></ul>`).appendTo(this.$national);
         // add the WHAT IS LOVE INC link
-        this.$nationalItems.append($(`<a href="/about" target="_blank">WHAT IS LOVE INC</a>`));
+        //this.$nationalItems.append($(`<a href="/about" target="_blank">WHAT IS LOVE INC</a>`));
         // add the START A LOVE INC NEAR YOU link
         this.$nationalItems.append($(`<a href="https://loveinc.org/start-a-love-inc" target="_blank">START A LOVE INC NEAR YOU</a>`));
 

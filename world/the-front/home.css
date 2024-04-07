@@ -29,7 +29,7 @@
 }
 
 .news {
-    background: var(--third-color);
+    background: var(--second-color);
 }
 
 .Christ-centered {
@@ -38,4 +38,16 @@
 
 .Christ-centered * {
     color: var(--second-color);
+}
+
+.souper {
+    background: url('/img/souper-poster.jpg') !important;
+    background-size: cover !important;
+    position: relative;
+}
+
+.souper a {
+    position: absolute;
+    right: 15%;
+    top: 30%;
 }

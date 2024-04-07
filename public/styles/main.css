@@ -78,6 +78,7 @@ section {
 section p {
     width: 100%;
     max-width: var(--max-main-width);
+    padding: 10px;
 }
 
 button {
@@ -327,6 +328,10 @@ nav a p {
     align-items: center;
 }
 
+.grey {
+    background: #f2f2f2;
+}
+
 .invisible {
     display: none !important;
 }
@@ -351,6 +356,7 @@ nav a p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 40px 40px;
 }
 
 section.card-list {
@@ -388,8 +394,17 @@ section .card {
     flex-shrink: 0
 }
 
+section .long.card {
+    width: 530px;
+    height: 400px;
+}
+
 section .card h1, section .card h2, section .card h3, section .card h4, section .card h5, section .card h6 {
     margin-top: 0;
+}
+
+section .card p {
+    padding: 0;
 }
 
 main #nav-button {
@@ -448,6 +463,7 @@ div.footer h6 {
 
 .form {
     width: 100%;
+    max-width: var(--max-main-width);
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -544,6 +560,7 @@ div.footer h6 {
 section img.side {
     width: 50%;
     height: 500px;
+    min-height: 50vh;
     padding: 0;
     object-fit: cover;
     order: 0;
@@ -791,6 +808,8 @@ a.link-button {
     section img.side {
         width: 100%;
         border-radius: 0 !important;
+        min-height: 20vh;
+        height: 25vh;
     }
 
     section.card-list {
@@ -799,5 +818,13 @@ a.link-button {
     
     section.reverse-card-list {
         padding-right: 5px;
+    }
+
+    .half {
+        width: 100% !important;
+    }
+
+    section img.side.right {
+        order: 0;
     }
 }
