@@ -359,17 +359,17 @@ nav a p {
     padding: 40px 40px;
 }
 
-section.card-list {
+.card-list {
     display: flex;
     align-content: flex-start;
-    padding-left: calc((100% - var(--max-main-width)) / 2);
+    padding-left: calc((100% - var(--max-main-width)) / 4);
     flex-wrap: wrap;
     overflow-y: hidden;
     overflow-x: auto;
     height: 600px;
 }
 
-section.reverse-card-list {
+.reverse-card-list {
     display: flex;
     align-content: flex-end;
     padding-right: calc((100% - var(--max-main-width)) / 2);
@@ -380,7 +380,7 @@ section.reverse-card-list {
     height: 600px;
 }
 
-section .card {
+.card {
     width: 300px;
     height: 400px;
     box-shadow: var(--shadow);
@@ -394,16 +394,16 @@ section .card {
     flex-shrink: 0
 }
 
-section .long.card {
+.long.card {
     width: 530px;
     height: 400px;
 }
 
-section .card h1, section .card h2, section .card h3, section .card h4, section .card h5, section .card h6 {
+.card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
     margin-top: 0;
 }
 
-section .card p {
+.card p {
     padding: 0;
 }
 
@@ -419,6 +419,7 @@ a.external {
     border-radius: var(--border-radius);
     padding: 20px 30px;
     margin: 5px;
+    box-shadow: var(--shadow);
 }
 
 a.external:hover {
@@ -677,17 +678,21 @@ a.link-button {
 
     main.nav-open {
         height: 0;
+        min-height: 0;
     }
 
     main #nav-button {
         display: flex;
         position: absolute;
-        right: 3px;
-        top: 3px;
+        right: 0;
+        top: 0;
         font-family: sans-serif;
-        width: 40px;
         height: 40px;
         padding: 10px;
+        margin: 0;
+        width: 100%;
+        justify-content: space-between;
+        border-radius: 0;
     }
 
     .info {
@@ -778,7 +783,7 @@ a.link-button {
     }
 
     .fade {
-        padding-top: 40px;
+        padding-top: 80px;
     }
 
     header {
@@ -812,12 +817,24 @@ a.link-button {
         height: 25vh;
     }
 
-    section.card-list {
+    .card-list {
         padding-left: 5px;
+        flex-direction: column;
+        height: auto;
+        align-content: center;
     }
     
-    section.reverse-card-list {
+    .reverse-card-list {
         padding-right: 5px;
+        flex-direction: column;
+        height: auto;
+        align-content: center;
+    }
+
+    .long.card {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 106 / 80;
     }
 
     .half {

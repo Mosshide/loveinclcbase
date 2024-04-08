@@ -18,7 +18,7 @@ class ThemeApplicator {
         this.$head.append($(`<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">`));
 
         // add the nav button for mobile
-        this.$navButton = $("<button id='nav-button'><i class='fa-solid fa-bars'></i></button>").prependTo(this.$main);
+        this.$navButton = $("<button id='nav-button'>Navigation<i class='fa-solid fa-bars'></i></button>").prependTo(this.$main);
         this.$navButton.click(() => this.enableNavMobile());
         
         // add the nav

@@ -48,6 +48,14 @@
 
 .souper a {
     position: absolute;
-    right: 15%;
+    right: 8%;
     top: 30%;
+}
+
+/* styles for screens under 1000px wide */
+@media only screen and (max-width: 1000px) {
+    .souper {
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+    }
 }
