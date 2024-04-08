@@ -170,9 +170,19 @@ footer {
 }
 
 hr {
-    border: 1px solid var(--second-color);
+    border: 1px solid var(--main-color-hover);
     margin: 10px 0;
     width: 100%;
+}
+
+main>h2 {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    background: var(--main-color);
+    color: white;
+    max-width: 100%;
+    padding: 60px;
 }
 
 /* national bar */
