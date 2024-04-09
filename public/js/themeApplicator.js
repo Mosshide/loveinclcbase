@@ -37,7 +37,7 @@ class ThemeApplicator {
         else this.$navItems.append($(`<a href="/contact"><p>Contact Us</p></a>`));
         if (this.path == "about") this.$navItems.append($(`<a class="selected" href="/about"><p>About Us</p></a>`));
         else this.$navItems.append($(`<a href="/about"><p>About Us</p></a>`));
-        this.$navItems.append($(`<a id="donate" href="https://loveinclewiscounty.maxgiving.com/"><p>Donate</p></a>`));
+        this.$navItems.append($(`<a id="donate" href="https://loveinclewiscounty.maxgiving.com/"><img src="/img/heart.png"><p>Donate</p></a>`));
         // add the close button for mobile
         this.$closeNav = $(`<button id="close-nav"><i class="fa-solid fa-xmark"></i></button>`).appendTo(this.$nav);
         this.$closeNav.click(() => this.disableNavMobile());

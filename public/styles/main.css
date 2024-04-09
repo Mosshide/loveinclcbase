@@ -73,6 +73,9 @@ section {
     flex-direction: column;
     min-height: 20px;
     align-content: center;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 section p {
@@ -308,13 +311,23 @@ nav #donate {
     border-radius: var(--border-radius);
     margin: 15px;
     height: 50px;
-    padding-bottom: 0;
+    padding: 5px;
 }
 
 nav #donate:hover {
     background: var(--main-color-hover);
     transition: all 0.1s;
     transform: scale(1.01);
+}
+
+nav #donate img {
+    height: 70%;
+    width: auto;
+    padding-left: 5px;
+}
+
+nav #donate p {
+    padding: 5px;
 }
 
 nav a img {
@@ -342,6 +355,14 @@ nav a p {
     background: #f2f2f2;
 }
 
+.raised {
+    z-index: 1;
+}
+
+.bottom-bumper {
+    margin-bottom: 40px !important;
+}
+
 .invisible {
     display: none !important;
 }
@@ -366,17 +387,52 @@ nav a p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 40px 40px;
+    padding: 20px 40px;
+}
+
+.bottom-button {
+    width: 90%;
+    position: absolute;
+    bottom: -45px;
+    left: 5%;
+    padding: 10px 20px !important;
+    border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
+    z-index: -1;
+    text-align: center;
 }
 
 .card-list {
     display: flex;
-    align-content: flex-start;
+    align-content: center;
+    padding-left: calc((100% - var(--max-main-width)) / 4);
+    flex-wrap: nowrap;
+    height: 600px;
+    width: 100%;
+    overflow-y: visible;
+    overflow-x: auto;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    align-items: center;
+}
+
+.card-grid {
+    display: flex;
+    align-content: center;
     padding-left: calc((100% - var(--max-main-width)) / 4);
     flex-wrap: wrap;
-    overflow-y: hidden;
-    overflow-x: auto;
-    height: 600px;
+    height: auto;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: visible;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.card-grid .card:nth-child(even) {
+    background: rgb(241, 247, 255);
 }
 
 .reverse-card-list {
@@ -391,8 +447,9 @@ nav a p {
 }
 
 .card {
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: auto;
+    max-height: 500px;
     box-shadow: var(--shadow);
     border-radius: var(--border-radius);
     padding: 20px;
@@ -400,8 +457,9 @@ nav a p {
     flex-direction: column;
     align-items: center;
     background: white;
-    margin: 10px;
-    flex-shrink: 0
+    margin: 0;
+    flex-shrink: 0;
+    position: relative;
 }
 
 .long.card {
@@ -590,6 +648,18 @@ section img.side.right {
     border-bottom-left-radius: 50% 100%;
     border-bottom-right-radius: 0 0;
     order: 99;
+}
+
+.cross-bg {
+    background: url("/img/cross-white.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 90%;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    z-index: 0;
 }
 
 /* old sections */
@@ -828,10 +898,13 @@ a.link-button {
     }
 
     .card-list {
-        padding-left: 5px;
+        padding: 20px 5px;
         flex-direction: column;
         height: auto;
         align-content: center;
+        flex-wrap: nowrap;
+        gap: 10px;
+        align-items: center;
     }
     
     .reverse-card-list {
@@ -845,6 +918,7 @@ a.link-button {
         width: 100%;
         height: auto;
         aspect-ratio: 106 / 80;
+        max-height: initial;
     }
 
     .half {

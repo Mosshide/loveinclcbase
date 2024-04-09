@@ -1,5 +1,6 @@
 :root {
     --third-color: #f0f0f0;
+    --fourth-color: #002647;    
 }
 
 /* update bg */
@@ -29,7 +30,9 @@
 }
 
 .news {
-    background: var(--second-color);
+    background: var(--fourth-color);
+    height: auto;
+    padding: 0;
 }
 
 .Christ-centered {
@@ -46,16 +49,16 @@
     position: relative;
 }
 
-.souper a {
-    position: absolute;
-    right: 8%;
-    top: 30%;
+.donate-heart {
+    width: 30%;
+    height: auto;
+    margin: 0 10px;
 }
 
 /* styles for screens under 1000px wide */
 @media only screen and (max-width: 1000px) {
     .souper {
-        background-size: contain !important;
+        background-size: cover !important;
         background-repeat: no-repeat !important;
     }
 }
