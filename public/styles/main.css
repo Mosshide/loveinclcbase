@@ -524,6 +524,14 @@ div.footer h6 {
     font-size: 20px;
 }
 
+div.footer a {
+    color: white;
+    width: 100%;
+    padding: 0px 20px;
+    font-size: 18px;
+    margin: 1px;
+}
+
 .selected {
     background-color: var(--main-color);
     color: white;
