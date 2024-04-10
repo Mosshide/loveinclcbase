@@ -425,12 +425,20 @@ nav a p {
     overflow-y: auto;
     overflow-x: visible;
     gap: 20px;
-    align-items: center;
     padding: 20px;
-    align-items: flex-start;
+    align-items: stretch;
+    justify-content: center;
 }
 
-.card-grid .card:nth-child(even) {
+.card-grid:nth-child(even) .card:nth-child(even) {
+    background: rgb(241, 247, 255);
+}
+
+.card-grid.alt .card:nth-child(even) {
+    background: var(--second-color);
+}
+
+.card-grid.alt .card:nth-child(odd) {
     background: rgb(241, 247, 255);
 }
 
