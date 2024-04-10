@@ -404,6 +404,7 @@ nav a p {
 .card-list {
     display: flex;
     align-content: center;
+    padding: 20px 50px;
     padding-left: calc((100% - var(--max-main-width)) / 4);
     flex-wrap: nowrap;
     height: 600px;
@@ -411,8 +412,6 @@ nav a p {
     overflow-y: visible;
     overflow-x: auto;
     gap: 20px;
-    align-items: center;
-    padding: 20px;
     align-items: center;
 }
 
@@ -633,6 +632,7 @@ section img.side {
     padding: 0;
     object-fit: cover;
     order: 0;
+    object-position: center;
 }
 
 section img.side.left {
@@ -912,6 +912,10 @@ a.link-button {
         flex-direction: column;
         height: auto;
         align-content: center;
+    }
+
+    .card {
+        max-width: 100%;
     }
 
     .long.card {
