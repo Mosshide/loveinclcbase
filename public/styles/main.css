@@ -180,13 +180,16 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    list-style: none;
     justify-content: flex-start;
+    width: 100%;
+    max-width: var(--max-main-width);
+    padding: 10px 3%;
 }
 
 li {
     width: 100%;
-    margin: 10px;
+    margin: 5px;
+    font-size: 18px;
 }
 
 footer {
@@ -290,6 +293,7 @@ nav ul {
     align-items: center;
     flex-direction: row;
     margin-right: 20px;
+    padding: 0;
 }
 
 nav ul a {
@@ -582,6 +586,7 @@ div.footer a {
     margin: 30px;
     box-shadow: var(--shadow);
     border-radius: var(--border-radius);
+    background: white;
 }
 
 .form label {
