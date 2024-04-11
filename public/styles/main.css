@@ -1,6 +1,7 @@
 :root {
     --main-color: rgb(64, 130, 228);
     --main-color-hover: rgb(74, 136, 230);
+    --alternating-color: rgb(243, 248, 255);
     --second-color: #ffffff;
     --second-color-hover: #e2e2e2;
     --shadow-color: rgba(0,0,0,0.55);
@@ -142,6 +143,13 @@ h5 {
     font-size: 20px;
     margin: 0;
     margin-top: 20px;
+}
+
+h6 {
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    margin: 0;
 }
 
 p {
@@ -431,7 +439,7 @@ nav a p {
 }
 
 .card-grid:nth-child(even) .card:nth-child(even) {
-    background: rgb(241, 247, 255);
+    background: var(--alternating-color);
 }
 
 .card-grid.alt .card:nth-child(even) {
@@ -472,6 +480,11 @@ nav a p {
 .long.card {
     width: 530px;
     height: 400px;
+}
+
+.small.card {
+    width: 300px;
+    height: 300px;
 }
 
 .card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
@@ -530,6 +543,7 @@ div.footer h6 {
     padding: 5px 20px;
     font-weight: bold;
     font-size: 20px;
+    text-align: left;
 }
 
 div.footer a {
