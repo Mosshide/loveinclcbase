@@ -456,17 +456,17 @@ nav a p {
     justify-content: center;
 }
 
-.card-grid:nth-child(even) .card:nth-child(even) {
+/* .card-grid:nth-child(even) .card:nth-child(3n) {
     background: var(--alternating-color);
 }
 
-.card-grid.alt .card:nth-child(even) {
+.card-grid.alt .card:nth-child(3n) {
     background: var(--second-color);
 }
 
-.card-grid.alt .card:nth-child(odd) {
+.card-grid.alt .card:nth-child(3n+1) {
     background: rgb(241, 247, 255);
-}
+} */
 
 .reverse-card-list {
     display: flex;

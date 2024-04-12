@@ -1,0 +1,3 @@
+section .card-grid {
+    max-width: var(--max-main-width);
+}
