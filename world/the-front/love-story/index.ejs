@@ -1,7 +1,15 @@
 <section>
     <div class="love-story">
         <% if (query.story) { %>
-            <%- include(`./stories/${query.story}.ejs`) %>
+            <!-- add more cases to publish a story -->
+            <% switch (query.story) { 
+                case 'original': %>
+                    <%- include(`./stories/${query.story}.ejs`); %>
+                    <% break; 
+                default: %>
+                    <%- "<h3>Not Found</h3>" %>
+                    <% break;
+             } %>
         <% } %>
     </div>
 </section>
