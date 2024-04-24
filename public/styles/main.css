@@ -518,7 +518,7 @@ nav a p {
 .card h5 {
     background: var(--main-color);
     color: white;
-    margin: 0px -20px 10px -20px;
+    margin: 0px 0 10px 0;
     padding: 10px;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
