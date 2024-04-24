@@ -1,8 +1,3 @@
-:root {
-    --third-color: #f0f0f0;
-    --fourth-color: #002647;    
-}
-
 /* update bg */
 .hero {
     background: url('/img/Chehalis_l.jpg');

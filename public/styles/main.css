@@ -9,6 +9,10 @@
     --max-main-width: 1000px;
     --border-radius: 10px;
     --button-scale: scale(1.01);
+    --third-color: #f0f0f0;
+    --fourth-color: #002647; 
+    --fifth-color: #e36820;
+    --fifth-color-hover: #f37228;
 }
 
 * {
@@ -332,16 +336,16 @@ nav .nav-header:hover {
 }
 
 nav #donate {
-    background: var(--main-color);
+    background: var(--fifth-color);
     color: white;
     border-radius: var(--border-radius);
     margin: 15px;
     height: 50px;
-    padding: 5px;
+    padding: 5px 10px;
 }
 
 nav #donate:hover {
-    background: var(--main-color-hover);
+    background: var(--fifth-color-hover);
     transition: all 0.1s;
     transform: scale(1.01);
 }
@@ -485,7 +489,8 @@ nav a p {
     max-height: 500px;
     box-shadow: var(--shadow);
     border-radius: var(--border-radius);
-    padding: 20px;
+    padding: 0;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -509,8 +514,17 @@ nav a p {
     margin-top: 0;
 }
 
+
+.card h5 {
+    background: var(--main-color);
+    color: white;
+    margin: 0px -20px 10px -20px;
+    padding: 10px;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
 .card p {
-    padding: 0;
+    padding: 0 20px;
 }
 
 main #nav-button {
@@ -519,7 +533,7 @@ main #nav-button {
 
 a.external {
     text-decoration: none;
-    background: var(--main-color);
+    background: var(--fifth-color);
     color: white;
     border: none;
     border-radius: var(--border-radius);
@@ -529,7 +543,7 @@ a.external {
 }
 
 a.external:hover {
-    background: var(--main-color-hover);
+    background: var(--fifth-color-hover);
     transition: all 0.1s;
     transform: scale(1.01);
 }
@@ -878,10 +892,6 @@ a.link-button {
         margin-right: 10px;
         margin-left: 0;
         border-radius: 0 var(--border-radius) var(--border-radius) 0;
-    }
-
-    nav #donate {
-        width: 50%;
     }
 
     nav a {
