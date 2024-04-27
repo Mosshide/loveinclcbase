@@ -131,19 +131,21 @@ button:hover {
 h2 {
     width: 100%;
     max-width: var(--max-main-width);
-    font-size: 80px;
+    font-size: 60px;
     margin: 5px 0;
     margin-top: 40px;
     text-align: center;
+    font-family: "Ubuntu", sans-serif;
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 25px;
     margin: 0;
     margin-top: 20px;
     width: 100%;
     text-align: center;
     padding: 10px;
+    font-family: "Ubuntu", sans-serif;
 }
 
 h4 {
@@ -152,6 +154,7 @@ h4 {
     font-size: 25px;
     margin: 0;
     margin-top: 20px;
+    font-family: "Ubuntu", sans-serif;
 }
 
 h5 {
@@ -160,6 +163,7 @@ h5 {
     font-size: 20px;
     margin: 0;
     margin-top: 20px;
+    font-family: "Ubuntu", sans-serif;
 }
 
 h6 {
@@ -167,6 +171,7 @@ h6 {
     width: 100%;
     font-size: 15px;
     margin: 0;
+    font-family: "Ubuntu", sans-serif;
 }
 
 p {
@@ -213,7 +218,7 @@ main>h2 {
     background: var(--main-color);
     color: white;
     max-width: 100%;
-    padding: 60px;
+    padding: 40px;
 }
 
 /* national bar */
@@ -279,7 +284,6 @@ nav {
     height: 80px;
     background-color: var(--second-color);
     padding: 0;
-    border-bottom: 3px solid var(--main-color);
     display: flex;
     justify-content: space-between;
     overflow: hidden;
@@ -835,9 +839,15 @@ a.link-button {
         height: 40px;
         padding: 10px;
         margin: 0;
-        width: 100%;
         justify-content: space-between;
         border-radius: 0;
+        z-index: 1;
+        width: 100%;
+        background: var(--fifth-color);
+    }
+
+    main #nav-button:hover {
+        background: var(--fifth-color-hover);
     }
 
     .info {
@@ -911,7 +921,7 @@ a.link-button {
         display: none;
         position: absolute;
         right: 10px;
-        bottom: 60px;
+        bottom: 20px;
         font-family: sans-serif;
         width: 40px;
         height: 40px;
