@@ -51,7 +51,7 @@ export default async function submitApplication(req, user) {
         // render the data so it is readable in the email
         // the message will need to be rendered as HTML, with line breaks converted to <br> tags
         //await req.db.SendMail.send("wyattsushi@gmail.com", `New Volunteer Application for Love INC of Lewis County`, `
-        await req.db.SendMail.send("volunteers@loveincoflewiscounty.org", `New Volunteer Application for Love INC of Lewis County`, `
+        await req.db.SendMail.send("exec.director@loveincoflewiscounty.org", `New Volunteer Application for Love INC of Lewis County`, `
             <div style="border-radius:5px; width: 90%; padding: 20px; background: rgb(242,242,245);" class="custom-email-body">
                 <img src="https://loveinclcbase-99e96083d1e2.herokuapp.com/img/banner.jpg" alt="Love INC of Lewis County Logo" style="width: 100%; height: auto;">
                 <h1>New Volunteer Application for: ${newApplication.firstName + " " + newApplication.lastName}</h1> 
