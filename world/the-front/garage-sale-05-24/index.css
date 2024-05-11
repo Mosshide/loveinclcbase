@@ -1,0 +1,68 @@
+main {
+    padding: 0;
+}
+
+img.detail {
+    width: 50%;
+}
+
+.details {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.half-box {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.hero {
+    background: url("/img/office.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background-blend-mode: multiply;
+    background-color: rgba(1, 28, 65, 0.664);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.hero * {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.hero h2 {
+    margin: 20px;
+    font-size: 40px;
+}
+
+.hero p {
+    max-width: 80%;
+}
+
+/* styles for screens under 1000px wide */
+@media only screen and (max-width: 1000px) {
+    .half-box {
+        width: 100%;
+    }
+
+    img.detail {
+        width: 100%;
+    }
+
+    .hero {
+        aspect-ratio: 9 / 12;
+    }
+}
