@@ -1,0 +1,20 @@
+div.garage {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    background: rgb(247, 247, 247);
+    border-radius: 5px;
+    box-shadow: inset rgba(21, 115, 221, 0.363) 0 0 10px;
+}
+
+div.garage h3 {
+    margin: 2vh 10px;
+    text-align: center;
+}
+
+div.garage a {
+    margin: 2vh 10px;
+}
