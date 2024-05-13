@@ -389,6 +389,11 @@ nav a p {
     background: #f2f2f2;
 }
 
+.blue {
+    background: var(--main-color);
+    color: white;
+}
+
 .raised {
     z-index: 1;
 }
@@ -695,7 +700,7 @@ div.footer a {
     flex-direction: column;
     min-height: 20px;
     align-content: center;
-    background: rgba(1, 1, 107, 0.452);
+    background: rgba(1, 1, 71, 0.587);
 }
 
 section img.side {
@@ -728,9 +733,9 @@ section img.side.right {
     background-size: contain;
     background-repeat: no-repeat;
     width: auto;
-    height: 90%;
+    height: 60%;
     position: absolute;
-    top: 10%;
+    top: 40%;
     left: 0;
     z-index: 0;
 }

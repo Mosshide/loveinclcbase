@@ -1,7 +1,8 @@
 /* update bg */
 .hero {
-    background: url('/img/Chehalis_l.jpg');
+    background: url('/img/office.jpg');
     background-size: cover;
+    background-position: center;
     min-height: 60vh;
 }
 
@@ -24,10 +25,17 @@
     background: var(--third-color);
 }
 
-.news {
+section.news {
     background: var(--fourth-color);
     height: auto;
     padding: 0;
+}
+
+section.news .card-list {
+    padding-left: 20vw;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
 }
 
 .Christ-centered {
@@ -55,5 +63,9 @@
     .souper {
         background-size: cover !important;
         background-repeat: no-repeat !important;
+    }
+
+    section.news .card-list {
+        padding-left: 0;
     }
 }
