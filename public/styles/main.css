@@ -466,7 +466,7 @@ nav a p {
     gap: 20px;
     padding: 20px;
     align-items: stretch;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 /* .card-grid:nth-child(even) .card:nth-child(3n) {
