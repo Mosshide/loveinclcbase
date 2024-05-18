@@ -3,10 +3,29 @@ section .card-grid {
     justify-content: center;
 }
 
+.card.kacs {
+    padding: 0;
+    padding-bottom: ;
+}
+
+a.kacs {
+    width: 100%;
+    height: auto;
+}
+
 img.kacs {
     width: 100%;
     height: auto;
-    padding: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+a.kacs p {
+    position: absolute;
+    left: 90px;
+    top: 15px;
+    color: white;
+    font-size: 14px;
 }
 
 .card-grid .card.header {
