@@ -444,6 +444,7 @@ hr.for-space {
     border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
     z-index: -1;
     text-align: center;
+    margin: 0;
 }
 
 .card-list {
@@ -1031,6 +1032,11 @@ a.link-button {
 
     .card a {
         margin: 0 20px;
+    }
+
+    a.bottom-button {
+        margin: 0;
+        bottom: -43px;
     }
 
     .long.card {

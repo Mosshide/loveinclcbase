@@ -67,7 +67,7 @@ class ThemeApplicator {
         this.$footer.append($("<p>Love INC of Lewis County</p>"));
         this.$footer.append($("<p>PO Box 152</p>"));
         this.$footer.append($("<p>Chehalis, WA 98532</p>"));
-        this.$footer.append($("<p>360-748-8611</p>")); 
+        this.$footer.append($("<p>(360) 748-8611</p>")); 
         this.$footer.append($(`<a href="/tac" target="_blank">Terms and Conditions</a>`));  
         this.$footer.append($(`<a href="/privacy" target="_blank">Privacy Policy</a>`));
     }
