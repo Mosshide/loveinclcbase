@@ -3,6 +3,7 @@ class ThemeApplicator {
     constructor(settings) {
         this.settings = {
             hero: false,
+            description: "Love INC of Lewis County is mobilizing the church to transform lives.",
             ...settings
         };
 
@@ -15,10 +16,13 @@ class ThemeApplicator {
         this.$body = $("body");
 
         // add the font awesome css to the head
-        this.$head.append($(`<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">`));
+        this.$head.append($(`<link async rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">`));
 
         //ADD FONTS
-        this.$head.append($(`<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">`));
+        this.$head.append($(`<link async href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">`));
+
+        // add the meta description to the head
+        this.$head.append($(`<meta name="description" content="${this.settings.description}">`));
 
         // add the nav button for mobile
         this.$navButton = $("<button id='nav-button'>Navigation<i class='fa-solid fa-bars'></i></button>").prependTo(this.$main);
