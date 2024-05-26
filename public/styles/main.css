@@ -565,6 +565,12 @@ a.external:hover {
     transform: scale(1.01);
 }
 
+a.external.inverted {
+    background: none;
+    box-shadow: none;
+    color: var(--fifth-color);
+}
+
 div.footer {
     width: 100%;
     margin: 0;
