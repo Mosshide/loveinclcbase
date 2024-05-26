@@ -618,7 +618,8 @@ div.footer a {
     margin: 30px;
     box-shadow: var(--shadow);
     border-radius: var(--border-radius);
-    background: white;
+    background: rgba(255, 255, 255, 0.124);
+    backdrop-filter: blur(10px);
 }
 
 .form label {
