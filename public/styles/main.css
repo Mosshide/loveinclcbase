@@ -28,6 +28,7 @@ main {
     min-height: 100px;
     display: flex;
     flex-wrap: wrap;
+    gap: 0;
     -webkit-box-shadow: var(--shadow);
     -moz-box-shadow: var(--shadow);
     box-shadow: var(--shadow);
@@ -713,7 +714,6 @@ div.footer a {
 section img.side {
     width: 50%;
     height: 500px;
-    min-height: 50vh;
     padding: 0;
     object-fit: cover;
     order: 0;
@@ -900,7 +900,6 @@ a.link-button {
     .side {
         width: 100%;
         border-left: none;
-        border-top: 1px solid var(--second-color);
     }
 
     .buttons {
@@ -1007,8 +1006,7 @@ a.link-button {
     section img.side {
         width: 100%;
         border-radius: 0 !important;
-        min-height: 20vh;
-        height: 25vh;
+        height: 250px;
     }
 
     .card-list {

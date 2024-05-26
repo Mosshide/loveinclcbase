@@ -1,9 +1,8 @@
 /* update bg */
 .hero {
-    background: url('/img/office.jpg');
+    background: url('/img/office/chehalis_sky_web.webp');
     background-size: cover;
     background-position: center;
-    min-height: 60vh;
 }
 
 .hero * {
@@ -67,5 +66,14 @@ section.news .card-list {
 
     section.news .card-list {
         padding-left: 0;
+    }
+}
+
+/* styles for screens under 1500px wide */
+@media only screen and (max-width: 1500px) {
+    .hero {
+        background: url('/img/office/chehalis_sky_web_medium.webp');
+        background-size: cover;
+        background-position: center;
     }
 }
