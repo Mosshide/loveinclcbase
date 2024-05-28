@@ -1,192 +1,215 @@
-<div class="info">
-    <h2>Resources</h2>
-    <hr>
-    <h3>Domestic Violence</h3>
-    <p>
-        Hope Alliance (formerly The Human Response Network) works with survivors of domestic 
-        violence and sexual assault. Our crisis line is available 24 hours a day, 7 days a week: 
-        360.748.6601 or toll free 1.800.244.7414. 815 W Main, Centralia, WA 98531
-    </p>
-    
-    <h3>Food Banks</h3>
-    <ul>
-        <li>
+<style>
+    <%- include('index.css') %>
+</style>
+
+<h2>Resources</h2>
+
+<section>
+    <div class="card-grid">
+        <div class="card header domestic-violence" onclick="toggleDomesticViolence()">
+            <h3>Domestic Violence</h3>
+            <p>Hide All</p>
+        </div>
+        <div class="card domestic-violence">
+            <h5>Hope Alliance</h5>
+            <h6>Formerly The Human Response Network</h6>
+            <p>
+                Works with survivors of domestic violence and sexual assault. 
+                Our crisis line is available 24 hours a day, 7 days a week:
+            </p>
+            <p>(360) 748-6601</p>
+            <p>toll free: 1(800) 244-7414</p>
+            <p>815 W Main, Centralia, WA 98531</p>
+        </div>
+        
+        <div class="card header food-bank" onclick="toggleFoodBanks()">
+            <h3>Food Banks</h3>
+            <p>Hide All</p>
+        </div>
+        <div class="card food-bank">
             <h5>Hub City Mission</h5>
             <p>416 N Tower, Centralia</p>
-            <p>Fresh Market Pantry</p>
-            <p>2nd Saturday of each month</p>
-            <p>9am - 10am</p>
-            <p>Food Boxes</p>
-            <p>4th Saturday of each month</p>
-            <p>9am</p>
-        </li>
-        <li>
+            <p>Fresh Market Pantry:</p>
+            <p>2nd Saturday of the month at 9am - 10am</p>
+            <p>Food Boxes:</p>
+            <p>4th Saturday of the month at 9am</p>
+        </div>
+        <div class="card food-bank">
             <h5>Gather Church Cafe</h5>
             <p>408 W Main St, Centralia</p>
-            <p>Thursdays and Fridays</p>
-            <p>9qm - 3pm</p>
+            <p>Thursday and Friday at 9am - 3pm</p>
             <a href="https://www.gatherchurch.com/food-box-delivery">www.gatherchurch.com/food-box-delivery</a>
-        </li>
-        <li>
+        </div>
+        <div class="card food-bank">
             <h5>God's Portion</h5>
             <p>1025 "F" St, Centralia</p>
-            <p>Wednesday 5pm - 7pm</p>
-            <p>Saturday 3pm</p>
-        </li>
-        <li>
+            <p>Wednesday at 5pm - 7pm</p>
+            <p>Saturday at 3pm</p>
+        </div>
+        <div class="card food-bank">
             <h5>Mineral Food Bank</h5>
             <p>116 Front St, Mineral WA 98355</p>
-            <p>Wednesdays 12pm - 3pm</p>
-        </li>
-    </ul>
-    <ul>
-        <li>
+            <p>Wednesday at 12pm - 3pm</p>
+        </div>
+        <div class="card food-bank">
             <h5>Centralia Food Bank</h5>
             <p>303 N Gold St, Centralia</p>
-            <p>Tuesday - Friday</p>
-            <p>10:00am - 12:00pm / 1pm - 3:00pm</p>
+            <p>Tuesday - Friday at 10:00am - 12:00pm and 1pm - 3:00pm</p>
             <p>(360) 736-4339</p>
-        </li>
-        <li>
+        </div>
+        <div class="card food-bank">
             <h5>Greater Chehalis Food Bank</h5>
             <p>750 SW 21st St, Chehalis</p>
-            <p>Fridays 12:15pm-3pm</p>
-        </li>
-        <li>
+            <p>Friday at 12:15pm - 3pm</p>
+        </div>
+        <div class="card food-bank">
             <h5>Jackson Prairie</h5>
             <p>4227 Jackson Hwy, Chehalis</p>
-            <p>Mondays 9am - 12pm</p>
-        </li>
-    </ul>
-    <h3>Clothing Banks</h3>
-    <ul>
-        <li>
+            <p>Monday at 9am - 12pm</p>
+        </div>
+
+        <div class="card header clothing" onclick="toggleClothing()">
+            <h3>Clothing Banks</h3>
+            <p>Hide All</p>
+        </div>
+        <div class="card clothing">
             <h5>Gather Church Cafe</h5>
             <p>408 W Main St, Centralia</p>
-            <p>Mondays and Wednesdays</p>
-            <p>9am - 10:30am</p>
-        </li>
-    </ul>
-    <ul>
-        <li>
+            <p>Monday and Wednesday at 9am - 10:30am</p>
+        </div>
+        <div class="card clothing">
             <h5>Lewis County Gospel Mission</h5>
             <p>72 SW Chehalis Ave, Chehalis</p>
-            <p>Monday - Friday 10am - 1:30pm</p>
-        </li>
-    </ul>
+            <p>Monday - Friday at 10am - 1:30pm</p>
+        </div>
 
-    <h3>Shower Resources</h3>
-    <ul>
-        <li>
+        <div class="card header showers" onclick="toggleShowers()">
+            <h3>Shower Resources</h3>
+            <p>Hide All</p>
+        </div>
+        <div class="card showers">
             <h5>Salvation Army</h5>
             <p>303 N Gold St, Centralia</p>
-            <p>Hygiene Center and Shower</p>
-            <p>Monday - Friday 10am - 2pm</p>
-            <p>Free Laundry</p>
-            <p>1 load per day</p>
-            <p>last load at 12:30pm</p>
-            <p>Temporary Shelter</p>
+            <p>Hygiene Center and Shower:</p>
+            <p>Monday - Friday at 10am - 2pm</p>
+            <p>Free Laundry; 1 load per day; Last load at 12:30pm</p>
+            <p>Temporary Shelter:</p>
             <p>7pm - 7am</p>
-        </li>
-        <li>
+        </div>
+        <div class="card showers">
             <h5>Lewis County Gospel Mission</h5>
             <p>72 SW Chehalis Ave, Chehalis</p>
-            <p>Monday - Friday 9am - 11am</p>
-        </li>
-    
-    <h3>Housing Resources</h3>
-    <ul>
-        <li>
+            <p>Monday - Friday at 9am - 11am</p>
+        </div>
+
+        <div class="card header housing" onclick="toggleHousing()">
+            <h3>Housing Resources</h3>
+            <p>Hide All</p>
+        </div>
+        <div class="card housing">
             <h5>Housing Resource Center of Lewis County</h5>
             <p>621 S Diamond St, Centralia</p>
-            <p>Monday - Friday 8am - 4pm</p>
-            <p>360-736-5140 during office hours</p>
-            <p>360-269-6688 24-hour phone</p>
-        </li>
-        <li>
+            <p>Monday - Friday at 8am - 4pm</p>
+            <p>Office Hours Phone: (360) 736-5140</p>
+            <p>24-Hour Phone: (360) 269-6688</p>
+        </div>
+        <div class="card housing">
             <h5>Lewis County Veterans Resources</h5>
             <p>360 NW North St, Chehalis, WA 98532</p>
-            <p>Every Tuesday 10am - 3pm</p>
-            <p>360-740-1417</p>
-            <p>360-740-1223</p>
+            <p>Tuesday at 10am - 3pm</p>
+            <p>(360) 740-1417</p>
+            <p>(360) 740-1223</p>
             <p>heidi.palmer@lewiscountywa.gov</p>
-            <p>Services:</p>
-            <p>Claims assistance, Emergency Financial Assistance, Food Assistance, Homeless Support, Rental Assistance, Utility Assistance</p>
-        </li>
-    </ul>
+            <p>Services: Claims assistance, Emergency Financial Assistance, Food Assistance, Homeless Support, Rental Assistance, Utility Assistance</p>
+        </div>
     
-    <h3>Local Employment Agencies</h3>
-    <ul>
-        <li>
+        <div class="card header employment" onclick="toggleEmployment()">
+            <h3>Local Employment Agencies</h3>
+            <p>Hide All</p>
+        </div>
+        <div class="card employment">
             <h5>PeopleReady</h5>
-            <p>360-807-8922</p>
-        </li>
-        <li>
+            <p>(360) 807-8922</p>
+        </div>
+        <div class="card employment">
             <h5>Express Employment</h5>
-            <p>360-330-9050</p>
-        </li>
-        <li>
+            <p>(360) 330-9050</p>
+        </div>
+        <div class="card employment">
             <h5>American Work Group</h5>
-            <p>360-345-1444</p>
-        </li>
-        <li>
+            <p>(360) 345-1444</p>
+        </div>
+        <div class="card employment">
             <h5>ASAP Chehalis</h5>
-            <p>360-996-4271</p>
-        </li>
-    </ul>
-    
-    <h3>Medical / Mental Health / Addiction Recovery</h3>
-    <ul>
-        <li>
+            <p>(360) 996-4271</p>
+        </div>
+
+        <div class="card header medical" onclick="toggleMedical()">
+            <h3>Medical / Mental Health / Addiction Recovery</h3>
+            <p>Hide All</p>
+        </div>
+        <div class="card medical">
             <h5>Health & Hope Medical Outreach</h5>
             <p>Free Medical Clinic</p>
-            <p>Tuesdays 5:30pm - 8:30pm</p>
+            <p>Tuesday at 5:30pm - 8:30pm</p>
             <p>1911 Cooks Hill Rd, Centralia</p>
             <p>(360) 623-1485</p>
             <a href="https://www.hhmo.org">www.hhmo.org</a>
-        </li>
-        <li>
+        </div>
+        <div class="card medical">
             <h5>Core Health</h5>
             <p>Behavioral Health Services</p>
             <p>104 S Rock St, Centralia</p>
             <p>(360) 807-4929</p>
             <a href="https://www.corehealthservices.org">www.corehealthservices.org</a>
-        </li>
-        <li>
+        </div>
+        <div class="card medical">
             <h5>Possibilities Pregnancy Clinic</h5>
             <p>1017 W Main St, Chehalis</p>
             <p>(360) 330-2229</p>
             <a href="https://www.findmypossibilities.org">www.findmypossibilities.org</a>
-        </li>
-    </ul>
-    <ul>
-        <li>
+        </div>
+        <div class="card medical">
             <h5>Celebrate Recovery</h5>
             <p>A Christ-Centered 12 Step Program</p>
             <p>Great Foursquare Church</p>
             <p>3030 Borst Ave, Centralia</p>
             <p>(360) 736-0778</p>
-            <p>EVERY Friday</p>
-            <p>Dinner 6pm</p>
-            <p>Group 7pm</p>
-        </li>
-        <li>
+            <p>EVERY Friday:</p>
+            <p>Dinner at 6pm</p>
+            <p>Group at 7pm</p>
+        </div>
+        <div class="card medical">
             <h5>American Behavioral Health Systems</h5>
-            <a href="https://www.americanbehavioralhealth.org">www.americanbehavioralhealth.org</a>
             <p>1723 Kresky Ave, Centralia</p>
             <p>(360) 559-6201</p>
             <p>and</p>
             <p>500 SE Washington Ave, Chehalis</p>
             <p>(360) 748-4776</p>
-        </li>
-    </ul>
-</div>
+            <a href="https://www.americanbehavioralhealth.org">www.americanbehavioralhealth.org</a>
+        </div>
 
-<div class="side">
+        <div class="card header music" onclick="toggleMusic()">
+            <h3>Christian Music Radio</h3>
+            <p>Hide All</p>
+        </div>
+        <div class="card kacs music">
+            <a class="kacs" href="https://www.kacs.org/listen-live">
+                <img class="kacs" src="/img/kacs.png">
+                <p>Click here for live broadcast</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="grey">
     <h3>Furniture / Firewood</h3>
-    <hr>
-    <h3>PLEASE NOTE--ALL REQUESTS TAKE AN AVERAGE OF 7-10 BUSINESS DAYS </h3>
-    <p>(360) 748-8611, Intake ext. 204, Furniture ext. 205</p>
+    <p><strong>
+        PLEASE NOTE -- All requests take an average of 7-10 business days. All calls are returned in the order they were received. 
+        Please do not leave multiple messages. Thank You.
+    </strong></p>
+    <p>(360) 748-8611</p>
+    <p>Intake ext. 204, Furniture ext. 205</p>
     <p>Call us for assistance with:</p>
     <ul>
         <li>Bedding</li>
@@ -194,21 +217,123 @@
         <li>Firewood (seasonal)</li>
         <li>Gas Voucher (must have valid driver's license and current car registration for the vehicle getting the gas)</li>
         <li>Grocery Vouchers (must have identification card)</li>
-        <li>Laundry Vouchers (areas in Chehalis, Centralia and PeEll)</li>
-    </ul>                                                                                                                        
-    <h3>All CALLS ARE RETURNED IN ORDER THEY WERE RECEIVED--</h3>
-    <p>Please do not leave multiple messages-Thank You</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h3>Christian Music Radio</h3>
-    <hr>
-    <img src="/img/kacs.png">
-    <a href="https://www.kacs.org/listen-live">Click here for live broadcast</a>
-</div>
+        <li>Laundry Vouchers (areas in Chehalis, Centralia and Pe Ell)</li>
+    </ul>                                                                                                             
+</section>
 
 <script src="/js/themeApplicator.js"></script>
 <script>
     const themeApplicator = new ThemeApplicator();
+
+    const toggleDomesticViolence = () => {
+        let $headerText = $(".card.domestic-violence.header p");
+        let $cards = $(".card.domestic-violence:not(.header)");
+
+        if ($cards.css("display") === "none") {
+            $cards.css("display", "block");
+            $headerText.text("Hide All");
+        } 
+        else {
+            $cards.css("display", "none");
+            $headerText.text("Show All");
+        }
+    }
+
+    const toggleFoodBanks = () => {
+        let $headerText = $(".card.food-bank.header p");
+        let $cards = $(".card.food-bank:not(.header)");
+
+        if ($cards.css("display") === "none") {
+            $cards.css("display", "block");
+            $headerText.text("Hide All");
+        } 
+        else {
+            $cards.css("display", "none");
+            $headerText.text("Show All");
+        }
+    }
+
+    const toggleClothing = () => {
+        let $headerText = $(".card.clothing.header p");
+        let $cards = $(".card.clothing:not(.header)");
+
+        if ($cards.css("display") === "none") {
+            $cards.css("display", "block");
+            $headerText.text("Hide All");
+        } 
+        else {
+            $cards.css("display", "none");
+            $headerText.text("Show All");
+        }
+    }
+
+    const toggleShowers = () => {
+        let $headerText = $(".card.showers.header p");
+        let $cards = $(".card.showers:not(.header)");
+
+        if ($cards.css("display") === "none") {
+            $cards.css("display", "block");
+            $headerText.text("Hide All");
+        } 
+        else {
+            $cards.css("display", "none");
+            $headerText.text("Show All");
+        }
+    }
+
+    const toggleHousing = () => {
+        let $headerText = $(".card.housing.header p");
+        let $cards = $(".card.housing:not(.header)");
+
+        if ($cards.css("display") === "none") {
+            $cards.css("display", "block");
+            $headerText.text("Hide All");
+        } 
+        else {
+            $cards.css("display", "none");
+            $headerText.text("Show All");
+        }
+    }
+
+    const toggleEmployment = () => {
+        let $headerText = $(".card.employment.header p");
+        let $cards = $(".card.employment:not(.header)");
+
+        if ($cards.css("display") === "none") {
+            $cards.css("display", "block");
+            $headerText.text("Hide All");
+        } 
+        else {
+            $cards.css("display", "none");
+            $headerText.text("Show All");
+        }
+    }
+
+    const toggleMedical = () => {
+        let $headerText = $(".card.medical.header p");
+        let $cards = $(".card.medical:not(.header)");
+
+        if ($cards.css("display") === "none") {
+            $cards.css("display", "block");
+            $headerText.text("Hide All");
+        } 
+        else {
+            $cards.css("display", "none");
+            $headerText.text("Show All");
+        }
+    }
+
+    const toggleMusic = () => {
+        let $headerText = $(".card.music.header p");
+        let $cards = $(".card.music:not(.header)");
+
+        if ($cards.css("display") === "none") {
+            $cards.css("display", "block");
+            $headerText.text("Hide All");
+        } 
+        else {
+            $cards.css("display", "none");
+            $headerText.text("Show All");
+        }
+    }
 </script>
