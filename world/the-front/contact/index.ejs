@@ -23,19 +23,19 @@
                 <input type="email" id="email" required>
             </div>
         
-            <label>*Message:</label>
-            <textarea id="message" required></textarea>
-        
             <div class="row">
                 <label>*Phone:</label>
                 <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
             </div>
         
+            <label>*Message:</label>
+            <textarea id="message" required></textarea>
+        
             <!-- Captcha -->
         
-            <button class="submit" onclick="submitMessage()">Submit</button>
+            <button class="submit" onclick="submitMessage()"><p>Submit</p></button>
     
-            <p class="invisible" id="alert"></p>
+            <p id="alert"></p>
         </div>
     </div>
 
@@ -51,12 +51,15 @@
     const themeApplicator = new ThemeApplicator();
 
     const submitMessage = async function() {
+        let $button = $("button.submit");
+        $button.attr("disabled", true);
+        $button.html("<p>Sending...</p>");
+
         let name = $("#name").val();
         let email = $("#email").val();
         let message = $("#message").val();
         let phone = $("#phone").val();
 
-        $("#alert").removeClass("invisible");
         if (name && email && message && phone) {
             let res = await base.do("submit-message", {
                 route: "/the-front/contact",
@@ -72,5 +75,8 @@
         } else {
             $("#alert").text('Please fill out all required fields.');
         }
+
+        $button.attr("disabled", false);
+        $button.html("<p>Submit</p>");
     }
 </script>
