@@ -6,5 +6,5 @@ import nkjvBible from "./globals/NKJV.js";
 
 const loveinclcFS = new NotherBaseFS(__dirname, { nkjvBible }, { 
     siteTitle: "Love INC of Lewis County",
-    favicon: fileURLToPath(new URL('./public/img/logo.ico', import.meta.url)),
+    favicon: fileURLToPath(new URL('./public/img/favicon.ico', import.meta.url)),
  });

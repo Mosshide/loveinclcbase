@@ -1,0 +1,25 @@
+<style>
+    <%- include('./index.css'); %>
+</style>
+
+<section>
+    <div class="love-story">
+        <a href="/" class="external inverted"><i class="fa-solid fa-left-long"></i>Return to Home</a>
+        <% if (query.story) { %>
+            <!-- add more cases to publish a story -->
+            <% switch (query.story) { 
+                case 'original': %>
+                    <%- include(`./stories/${query.story}.ejs`); %>
+                    <% break; 
+                default: %>
+                    <%- "<h3>Not Found</h3>" %>
+                    <% break;
+             } %>
+        <% } %>
+    </div>
+</section>
+
+<script src="/js/themeApplicator.js"></script>
+<script>
+    const themeApplicator = new ThemeApplicator();
+</script>
