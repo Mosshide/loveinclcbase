@@ -12,14 +12,14 @@
     <h4>(360) 748-8611</h4>
     <p>
         In addition, you will be asked to read the Affirmation of Faith (below), as well 
-        as to complete the Confidentiality/background form (also below). 
+        as to complete the Confidentiality/Background forms (also below). 
     </p>
     <p>
         These forms will ask for personal information for purposes of matching volunteers 
         with the duties at Love INC of Lewis County, which is a non-profit organization.
     </p>
-    <a class="link-button" href="/documents/volunteer-application.pdf" download>
-        <button>Download Volunteer Application</button>
+    <a class="external" href="/documents/volunteer-application.pdf" download>
+        Download Volunteer Application
     </a>
 </section>
 
@@ -90,7 +90,7 @@
         INC to perform a background check on you for the last ten years in Washington State.
     </p>
     
-    <div class="form">
+    <div class="raised form">
         <p>Fields marked with * are required to be filled.</p>
         <h5>Name*</h5>
         <div class="row">
@@ -114,7 +114,7 @@
         <h5>What church do you attend?</h5>
         <input type="text" id="church">
         <h5>Are you a member of that church?</h5>
-        <div class="row">
+        <div class="perma-row">
             <label for="yes">
                 Yes
                 <input type="radio" id="yes" name="member" value="yes">
@@ -152,7 +152,7 @@
         <h5>Brief Employment History</h5>
         <textarea id="employment" placeholder="Please provide a brief employment history"></textarea>
         <h5>Military Service?</h5>
-        <div class="row">
+        <div class="perma-row">
             <label for="yes-military">
                 Yes
                 <input type="radio" id="yes-military" name="military" value="yes">
@@ -166,6 +166,12 @@
         <textarea id="interests" placeholder="What are your interests and hobbies?"></textarea>
         <h5>To whom do you go for help/support in difficult times?</h5>
         <textarea id="support" placeholder="Who do you go to for help and support in difficult times?"></textarea>
+    </div>
+
+    <div class="cross-bg">
+        <div class="stake">
+            <div class="bar"></div>
+        </div>
     </div>
 </section>
 
@@ -184,7 +190,7 @@
         <h5>Date of Birth*</h5>
         <input type="date" id="background-dob">
         <h5>Gender on Birth Certificate*</h5>
-        <div class="row">
+        <div class="perma-row">
             <label for="male">
                 Male 
                 <input type="radio" id="male" name="gender" value="male">
@@ -202,7 +208,7 @@
 
     <!-- Captcha -->
     
-    <button class="submit" onclick="submitApplication()">Submit</button>
+    <button class="submit" onclick="submitApplication()"><p>Submit</p></button>
     
     <p id="alert"></p>
 </section>
@@ -212,6 +218,10 @@
     const themeApplicator = new ThemeApplicator();
 
     const submitApplication = async function() {
+        let $button = $("button.submit");
+        $button.attr("disabled", true);
+        $button.html("<p>Sending...</p>");
+
         let firstName = $("#first-name").val();
         let lastName = $("#last-name").val();
         let telephone = $("#telephone").val();
@@ -304,5 +314,8 @@
         } else {
             $("#alert").text('Please fill out all required fields.');
         }
+
+        $button.attr("disabled", false);
+        $button.html("<p>Submit</p>");
     }
 </script>

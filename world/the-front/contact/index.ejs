@@ -1,40 +1,48 @@
 <h2>Contact Us</h2>
 
 <section>
-    <p><strong>If you are in need of assistance, please call us at (360) 748-8611.</strong></p>
-
-    <p>
-        For any other business (<strong>not assistance</strong>) with <strong>Love INC</strong>, please fill out 
-        the following form to send us an email.
-    </p>
-
-    <hr class="for-space">
-
-    <div class="form">
-        <p>Fields marked with * are required to be filled.</p>
-        <div class="row">
-            <label>*Name:</label>
-            <input type="text" id="name" required>
+    <div class="raised">
+        <p><strong>If you are in need of assistance, please call us at (360) 748-8611.</strong></p>
+    
+        <p>
+            For any other business (<strong>not assistance</strong>) with <strong>Love INC</strong>, please fill out 
+            the following form to send us an email.
+        </p>
+    
+        <hr class="for-space">
+    
+        <div class="form">
+            <p>Fields marked with * are required to be filled.</p>
+            <div class="row">
+                <label>*Name:</label>
+                <input type="text" id="name" required>
+            </div>
+        
+            <div class="row">
+                <label>*Email:</label>
+                <input type="email" id="email" required>
+            </div>
+        
+            <div class="row">
+                <label>*Phone:</label>
+                <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            </div>
+        
+            <label>*Message:</label>
+            <textarea id="message" required></textarea>
+        
+            <!-- Captcha -->
+        
+            <button class="submit" onclick="submitMessage()"><p>Submit</p></button>
+    
+            <p id="alert"></p>
         </div>
-    
-        <div class="row">
-            <label>*Email:</label>
-            <input type="email" id="email" required>
-        </div>
-    
-        <label>*Message:</label>
-        <textarea id="message" required></textarea>
-    
-        <div class="row">
-            <label>*Phone:</label>
-            <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-        </div>
-    
-        <!-- Captcha -->
-    
-        <button class="submit" onclick="submitMessage()">Submit</button>
+    </div>
 
-        <p class="invisible" id="alert"></p>
+    <div class="cross-bg">
+        <div class="stake">
+            <div class="bar"></div>
+        </div>
     </div>
 </section>
 
@@ -43,12 +51,15 @@
     const themeApplicator = new ThemeApplicator();
 
     const submitMessage = async function() {
+        let $button = $("button.submit");
+        $button.attr("disabled", true);
+        $button.html("<p>Sending...</p>");
+
         let name = $("#name").val();
         let email = $("#email").val();
         let message = $("#message").val();
         let phone = $("#phone").val();
 
-        $("#alert").removeClass("invisible");
         if (name && email && message && phone) {
             let res = await base.do("submit-message", {
                 route: "/the-front/contact",
@@ -64,5 +75,8 @@
         } else {
             $("#alert").text('Please fill out all required fields.');
         }
+
+        $button.attr("disabled", false);
+        $button.html("<p>Submit</p>");
     }
 </script>

@@ -1,16 +1,19 @@
 section .card-grid {
     max-width: 100%;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 .card.kacs {
     padding: 0;
-    padding-bottom: ;
+    max-width: 100%;
 }
 
 a.kacs {
     width: 100%;
     height: auto;
+    display: flex;
+    
 }
 
 img.kacs {

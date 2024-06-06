@@ -6,4 +6,15 @@
     box-shadow: var(--shadow);
     border-radius: var(--border-radius);
     padding: 60px 20px;
+    position: relative;
+}
+
+.love-story a.external.inverted {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0;
 }
