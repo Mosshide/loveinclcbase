@@ -33,8 +33,9 @@ section.news {
 section.news .card-list {
     padding-left: 20vw;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     gap: 40px;
+    width: 100%;
 }
 
 .Christ-centered {
@@ -66,6 +67,7 @@ section.news .card-list {
 
     section.news .card-list {
         padding-left: 0;
+        gap: 25px;
     }
 }
 
