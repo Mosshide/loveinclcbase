@@ -39,6 +39,7 @@ main {
     justify-content: center;
     overflow: hidden;
     min-height: 90vh;
+    align-content: flex-start;
 }
 
 body {
@@ -221,6 +222,7 @@ main>h2 {
     color: white;
     max-width: 100%;
     padding: 40px;
+    height: min-content;
 }
 
 /* national bar */
@@ -532,6 +534,13 @@ hr.for-space {
     position: relative;
 }
 
+.max-card {
+    width: var(--max-main-width);
+    height: auto;
+    max-height: initial;
+    margin-bottom: 40px;
+}
+
 .long.card {
     width: 530px;
     height: 400px;
@@ -555,8 +564,16 @@ hr.for-space {
     border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
+.max-card h5 {
+    padding: 20px;
+}
+
 .card p {
     padding: 0 20px;
+}
+
+.max-card p {
+    padding: 5px 40px;
 }
 
 .card a {
