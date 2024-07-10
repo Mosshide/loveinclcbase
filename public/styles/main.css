@@ -52,6 +52,15 @@ body {
     min-height: 100vh;
 }
 
+body::after{
+    position: absolute; 
+    width:0; 
+    height:0; 
+    overflow:hidden; 
+    z-index:-1; 
+    content: url('/img/banner.webp'); 
+ }
+
 img {
     width: 100%;
     height: auto;
@@ -233,6 +242,7 @@ div.national {
     display: flex;
     justify-content: space-between;
     color: #f2f2f2;
+    overflow: hidden;
 }
 
 div.national .logo-items {
@@ -371,11 +381,11 @@ nav #donate p {
 nav a img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 nav a p {
-    padding: 20px;
+    padding: 15px;
 }
 
 /* globals */
@@ -618,6 +628,7 @@ div.footer {
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 div.footer p {
@@ -935,7 +946,7 @@ a.link-button {
         margin: 0;
         justify-content: space-between;
         border-radius: 0;
-        z-index: 1;
+        z-index: 5;
         width: 100%;
         background: var(--fifth-color);
     }
@@ -974,12 +985,18 @@ a.link-button {
 
     nav {
         height: 100px;
-        z-index: 1;
+        z-index: 5;
         flex-wrap: wrap;
         align-content: flex-start;
         position: absolute !important;
         top: 55px;
         left: 0;
+        justify-content: center;
+    }
+
+    nav .nav-header {
+        max-width: 420px;
+        height: 100px;
     }
 
     nav ul {
@@ -1014,7 +1031,7 @@ a.link-button {
         display: none;
         position: absolute;
         right: 10px;
-        bottom: 20px;
+        top: 550px;
         font-family: sans-serif;
         width: 40px;
         height: 40px;

@@ -1,8 +1,6 @@
 /* update bg */
 .hero {
-    background: url('/img/office/chehalis_sky_web.webp');
-    background-size: cover;
-    background-position: center;
+    
 }
 
 .hero * {
@@ -14,6 +12,15 @@
     max-width: var(--max-main-width);
     margin: 0;
     margin-bottom: 20px;
+}
+
+.hero>img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
 }
 
 .hero>p {
