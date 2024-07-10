@@ -16,7 +16,7 @@ class ThemeApplicator {
         this.$body = $("body");
 
         // add the font awesome css to the head
-        this.$head.append($(`<link async rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">`));
+        //this.$head.append($(`<link async rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">`));
 
         //ADD FONTS
         this.$head.append($(`<link async href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">`));
@@ -31,7 +31,7 @@ class ThemeApplicator {
         // add the nav
         this.$nav = $(`<nav></nav>`).prependTo(this.$body);
         // add the logo
-        this.$nav.append($(`<a class="nav-header" href="/"><img src="/img/loveinclc-logo-transparent.png" alt="Love INC of Lewis County"></a>`));
+        this.$nav.append($(`<a class="nav-header" href="/"><img src="/img/banner.webp" alt="Love INC of Lewis County"></a>`));
         // add the nav items
         this.$navItems = $(`<ul></ul>`).appendTo(this.$nav);
         if (this.path == "the-front") this.$navItems.append($(`<a class="selected" href="/the-front"><p>Home</p></a>`));
