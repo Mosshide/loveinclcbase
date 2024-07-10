@@ -1,5 +1,5 @@
 section .card-grid {
-    max-width: 100%;
+    max-width: var(--max-main-width);
     justify-content: center;
     overflow-x: hidden;
 }
