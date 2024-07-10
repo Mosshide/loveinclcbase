@@ -2,7 +2,6 @@
 class ThemeApplicator {
     constructor(settings) {
         this.settings = {
-            hero: false,
             description: "Love INC of Lewis County is mobilizing the church to transform lives.",
             ...settings
         };
