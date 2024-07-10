@@ -16,7 +16,7 @@ export default async function submitMessage(req, user) {
         // the message will need to be rendered as HTML, with line breaks converted to <br> tags
         //req.db.SendMail.send("wyattsushi@gmail.com", `New Message for Love INC of Lewis County`, `
         req.db.SendMail.send("exec.director@loveincoflewiscounty.org", `New Message for Love INC of Lewis County`, `
-            <img src="https://www.loveincoflewiscounty.org/img/banner.jpg" alt="Love INC of Lewis County Logo" style="width:90%; height:auto;">
+            <img src="https://www.loveincoflewiscounty.org/img/banner.webp" alt="Love INC of Lewis County Logo" style="width:90%; height:auto;">
             <h1>New Message From: ${newMessage.name}</h1> 
             <p>User's E-mail: ${newMessage.email}</p>
             <p>Phone Number: ${newMessage.phone}</p>
@@ -34,7 +34,7 @@ export default async function submitMessage(req, user) {
 
         // send a confirmation email to the user
         req.db.SendMail.send(newMessage.email, `Message Sent to Love INC of Lewis County`, `
-            <img src="https://www.loveincoflewiscounty.org/img/banner.jpg" alt="Love INC of Lewis County Logo" style="width:90%; height:auto;">
+            <img src="https://www.loveincoflewiscounty.org/img/banner.webp" alt="Love INC of Lewis County Logo" style="width:90%; height:auto;">
             <h1>Thank you for reaching out!</h1> 
             <p>Your message was sent to Love INC of Lewis County on ${new Date(newMessage.dateCreated).toLocaleDateString()}.</p>
             <p>We will reply as soon as we are able. Thank you for your patience!</p>
