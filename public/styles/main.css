@@ -504,6 +504,14 @@ hr.for-space {
     max-width: var(--max-main-width);
 }
 
+.main-vid {
+    width: 75%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+
 /* .card-grid:nth-child(even) .card:nth-child(3n) {
     background: var(--alternating-color);
 }
@@ -753,6 +761,8 @@ div.footer a {
 
 .central-info {
     padding: 40px 15px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .hero {
