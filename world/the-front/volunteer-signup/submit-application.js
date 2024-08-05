@@ -44,9 +44,9 @@ export default async function submitApplication(req, user) {
         ...req.body.ticket
     }
 
-    // require a cooldown between applications of 1 hour 00000
+    // require a cooldown between applications of 1 hour 
     if (!req.session.lastApplication) req.session.lastApplication = 0;
-    if (Date.now() - req.session.lastApplication < 36) return "Thank you! Please wait before submitting another application.";
+    if (Date.now() - req.session.lastApplication < 3600000) return "Thank you! Please wait before submitting another application.";
     else {
         // render the data so it is readable in the email
         // the message will need to be rendered as HTML, with line breaks converted to <br> tags
