@@ -18,7 +18,7 @@ export default async function submitMessage(req, user) {
         req.db.SendMail.send("exec.director@loveincoflewiscounty.org", `New Message for Love INC of Lewis County`, `
             <img src="https://www.loveincoflewiscounty.org/img/banner.webp" alt="Love INC of Lewis County Logo" style="width:90%; height:auto;">
             <h1>New Message From: ${newMessage.name}</h1> 
-            <p>User's E-mail: ${newMessage.email}</p>
+            <p>E-mail: ${newMessage.email}</p>
             <p>Phone Number: ${newMessage.phone}</p>
             <p>Submitted On: ${new Date(newMessage.dateCreated).toLocaleDateString()}</p>
             <p>Message: ${newMessage.message.replace(/\n/g, "<br>")}</p>
@@ -30,7 +30,7 @@ export default async function submitMessage(req, user) {
             <p style="margin:0; padding:0;">(360) 748-8611</p>
             <br>
             <p>[This is an automated message sent through the Love INC of Lewis County website. Please do not reply to this email.]</p>
-        `);
+        `, "Love INC of Lewis County");
 
         // send a confirmation email to the user
         req.db.SendMail.send(newMessage.email, `Message Sent to Love INC of Lewis County`, `
@@ -49,7 +49,7 @@ export default async function submitMessage(req, user) {
             <p style="margin:0; padding:0;">(360) 748-8611</p>
             <br>
             <p>[This is an automated message sent through the Love INC of Lewis County website. Please do not reply to this email.]</p>
-        `);
+        `, "Love INC of Lewis County");
 
         req.session.lastMessage = Date.now();
 
