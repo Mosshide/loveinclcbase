@@ -783,7 +783,7 @@ div.footer a {
     background: rgba(1, 1, 71, 0.425);
 }
 
-section img.side {
+section .side {
     width: 50%;
     height: 500px;
     padding: 0;
@@ -792,18 +792,15 @@ section img.side {
     object-position: center;
 }
 
-section img.side.left {
+section .side.left {
     border-top-left-radius: 0 0;
     border-top-right-radius: 50% 100%;
     border-bottom-left-radius: 0 0;
     border-bottom-right-radius: 0 0;
 }
 
-section img.side.right {
-    border-top-left-radius: 0 0;
-    border-top-right-radius: 0 0;
-    border-bottom-left-radius: 50% 100%;
-    border-bottom-right-radius: 0 0;
+section .side.right {
+    border-radius: 0;
     order: 99;
 }
 
@@ -1081,7 +1078,7 @@ a.link-button {
         margin-right: -20px;
     }
 
-    section img.side {
+    section .side {
         width: 100%;
         border-radius: 0 !important;
         height: 250px;
@@ -1128,7 +1125,7 @@ a.link-button {
         width: 100% !important;
     }
 
-    section img.side.right {
+    section .side.right {
         order: 0;
     }
 
